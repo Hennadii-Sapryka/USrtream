@@ -1,0 +1,39 @@
+﻿.site-footer {
+    background: linear-gradient(60deg, rgba(4, 8, 46, 0.95) 40%, rgba(26, 35, 126, 0.87) );
+    height: 150px;
+
+}
+
+.social-media-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-link {
+    display: inline-block;
+    color: white !important;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+    .social-link:hover > .social-text {
+        text-decoration: underline;
+    }
+
+.social-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.social-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.site-copyright {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+}

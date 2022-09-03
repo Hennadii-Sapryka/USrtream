@@ -1,0 +1,33 @@
+﻿@model IPublishedContent
+
+@using Microsoft.AspNetCore.Mvc
+@using Umbraco.Cms.Core.Media
+@using Umbraco.Cms.Core.Services
+@using Umbraco.Extensions
+
+@inject IUrlHelper Url
+@inject IImageUrlGenerator UrlGenerator
+@inject IMediaService MediaService
+
+
+@{
+    var onHomePage = (bool)(ViewBag.OnHomePage ?? false);
+    var home = Model.Root();
+
+}
+
+<div class="site-header">
+
+
+    <div class="content-container header-container clearfix">
+        <a href="@home.Url()">
+            <div class="logo-container">
+                <div class="logo-title">Living Stream</div>
+                <div class="logo-site">www.living-stream.com</div>
+            </div>
+        </a>
+
+        
+    </div>
+
+</div>

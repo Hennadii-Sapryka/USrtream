@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.AboutUs>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout";
+
+	var model = Model.AncestorOrSelf<AboutUs>();
+    var contentTitle = model.Value<string>("contentTitle");
+
+}
+
+<div class="content-container">
+    <h1 class="main-page-title">@contentTitle</h1>
+    <div class="t">
+        @Model.TextContent
+    </div>
+</div>

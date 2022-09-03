@@ -1,0 +1,121 @@
+﻿* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifRegular;
+}
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    margin: 0;
+}
+
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.site-content {
+    min-height: calc(100vh - 86px - 150px);
+}
+
+.content-container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.site-footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+@media(max-width: 1280px) {
+    .content-container {
+        width: 100%;
+    }
+}
+
+.main-section {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.main-page-title {
+    margin-bottom: 3rem;
+    font-size: 32px;
+}
+
+*.align-left {
+    text-align: left;
+}
+
+*.align-right {
+    text-align: right;
+}
+
+*.align-center {
+    text-align: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.direction-unset {
+    flex-direction: unset;
+}
+
+.direction-reverse {
+    flex-direction: row-reverse;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+*.full-width {
+    width: 100%;
+}
+
+*.half-width {
+    width: 50%;
+}
+
+*.margin-auto {
+    margin: 0 auto;
+}
+
+select {
+    line-height: 28px;
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid #283593;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+}
+
+.alert {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background: #00ff8b;
+}
+
+.alert > div {
+    font-size: 15px;
+}

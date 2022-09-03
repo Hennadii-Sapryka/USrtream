@@ -1,0 +1,41 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+
+    var homePage = Model.Root();
+}
+
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/footer.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/theme.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/header.css")" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    @RenderSection("Head", required: false)
+    <title>Living Stream - </title>
+
+</head>
+
+<body>
+    <div class="site">
+
+        @await Html.PartialAsync("_Header")
+
+        <div class="site-content clearfix">
+            <div class="main-section">
+
+                @RenderBody()
+            </div>
+        </div>
+
+        @await Html.PartialAsync("_Footer", homePage)
+    </div>
+
+
+</body>

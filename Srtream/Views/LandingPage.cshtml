@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+
+@section Head {
+    <link rel="stylesheet" href="@Url.Content("~/css/la.css")" />
+
+}
+
+@{
+    Layout = "_Layout.cshtml";
+
+    var homePage = Model.Root().Children();
+    var homeContent = Model.Children<Home>().FirstOrDefault();
+
+}
+
+
+<div>Landing page</div>
+
+<div>
+    @foreach (var item in homePage)
+    {
+        <a href="@item.Url()">@item.Name</a>
+    }
+</div>
