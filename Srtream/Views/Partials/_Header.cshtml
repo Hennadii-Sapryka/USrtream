@@ -1,5 +1,6 @@
 ﻿@model IPublishedContent
 
+@using Stream.UmbracoServices.Interfaces
 @using Microsoft.AspNetCore.Mvc
 @using Umbraco.Cms.Core.Media
 @using Umbraco.Cms.Core.Services
@@ -8,16 +9,29 @@
 @inject IUrlHelper Url
 @inject IImageUrlGenerator UrlGenerator
 @inject IMediaService MediaService
+@inject IUmbracoPageManager PageManager
 
 
 @{
     var onHomePage = (bool)(ViewBag.OnHomePage ?? false);
-    var home = Model.Root();
+    var rootType = Model.Root().GetType();
+    var home = PageManager.GetRoot<Home>();
 
+    var cropUrl = home.BackgroundImage.GetCropUrl("Landing Page Header", UrlGenerator, useFocalPoint: true);
+    var backgroundImageUrl = $"{home.BackgroundImage.Src}";
 }
 
 <div class="site-header">
 
+
+
+    <style>
+        .nav-background {
+            background-image: url("@backgroundImageUrl");
+        }
+    </style>
+
+    <div class="nav-background"></div>
 
     <div class="content-container header-container clearfix">
         <a href="@home.Url()">
@@ -27,7 +41,7 @@
             </div>
         </a>
 
-        
+
     </div>
 
 </div>

@@ -3,7 +3,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Stream.UmbracoServices.Implementation;
+using Stream.UmbracoServices.Interfaces;
 using System;
+using Umbraco.Cms.Core.Configuration;
+using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Extensions;
 
@@ -38,11 +42,18 @@ namespace Srtream
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IUmbracoPageManager, UmbracoPageManager>();
+
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
                 .Build();
+
+            services.Configure<ModelsBuilderSettings>(options =>
+            {
+                options.ModelsMode = ModelsMode.SourceCodeAuto;
+            });
         }
 
         /// <summary>
