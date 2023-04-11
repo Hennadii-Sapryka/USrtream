@@ -1,6 +1,4 @@
-﻿using System;
-using Umbraco.Cms.Core.Models.PublishedContent;
-
+﻿
 namespace Stream.UmbracoServices.Interfaces
 {
     public interface IUmbracoPageManager

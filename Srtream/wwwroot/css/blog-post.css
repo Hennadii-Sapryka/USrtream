@@ -1,0 +1,95 @@
+.blog-post-card {
+    width: 305px;
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    text-decoration: none !important;
+}
+
+    .blog-post-card:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .blog-post-card-thumbnail {
+        width: 100%;
+        height: 190px;
+        background-size: contain;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        opacity: 0.75;
+    }
+
+.blog-post-card:hover > .blog-post-card-thumbnail {
+    opacity: 1;
+}
+
+.blog-post-card-header {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+}
+
+.blog-category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 12px;
+    background-color: rgba(40, 53, 147, 0.5);
+    color: white;
+    font-family: ElevenShares-SemiBold;
+    font-size: 11px;
+}
+
+.blog-post-details {
+    color: rgba(33, 33, 33, 0.6);
+    font-size: 16px;
+}
+
+.blog-post-card-title {
+    font-family: ElevenShares-SemiBold;
+    line-height: 24px;
+    color: #212121;
+    margin-top: 14px;
+}
+
+.blog-post-thumbnail {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-post-title {
+    font-family: ElevenShares-Bold;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.blog-post-header {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    color: rgba(33, 33, 33, 0.6);
+    margin-bottom: 15px;
+}
+
+.linked-ticker {
+    color: #005DE7;
+    font-family: ElevenShares-SemiBold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.linked-ticker:hover {
+    color: #003BC5;
+    cursor: pointer;
+    font-family: ElevenShares-Bold;
+}
+
+.blog-content {
+    margin-top: 15px;
+}

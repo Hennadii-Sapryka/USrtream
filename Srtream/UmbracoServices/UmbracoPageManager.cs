@@ -1,30 +1,20 @@
-﻿using Stream.Extensions;
-using Stream.UmbracoServices.Interfaces;
-using System;
-using System.Linq;
-using Umbraco.Cms.Core.Models.PublishedContent;
-using Umbraco.Cms.Core.Web;
-using Umbraco.Extensions;
+﻿
 
 namespace Stream.UmbracoServices.Implementation
 {
     public class UmbracoPageManager : IUmbracoPageManager
     {
-        private readonly IUmbracoContextFactory _contextAccessor;
+        private readonly IUmbracoContextFactory contextAccessor;
 
-        public UmbracoPageManager(
-            IUmbracoContextFactory umbracoContextAccessor
-            )
+        public UmbracoPageManager(IUmbracoContextFactory umbracoContextAccessor)
         {
-            _contextAccessor = umbracoContextAccessor;
+            contextAccessor = umbracoContextAccessor;
         }
 
         private IUmbracoContext Context()
         {
-            return _contextAccessor.EnsureUmbracoContext().UmbracoContext;
+            return contextAccessor.EnsureUmbracoContext().UmbracoContext;
         }
-
-       
 
         public TPage GetPage<TPage>(Func<TPage, bool> filter = null) where TPage : class, IPublishedContent
         {

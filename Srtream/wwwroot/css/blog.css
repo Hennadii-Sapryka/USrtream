@@ -1,0 +1,37 @@
+﻿.blog-categories {
+    margin-bottom: 30px;
+}
+
+.blog-category-option {
+    margin-top: 20px;
+    border: 1px solid #283593;
+    color: #283593;
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 24px;
+    font-family: ElevenShares-SemiBold;
+    font-size: 16px;
+    display: inline-block;
+}
+
+    .blog-category-option.selected {
+        background: #283593;
+        color: white;
+    }
+
+    .blog-category-option + .blog-category-option {
+        margin-left: 20px;
+    }
+
+.blog-posts {
+    width: 100%;
+}
+
+@media(max-width:768px) {
+    .blog-categories {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+}

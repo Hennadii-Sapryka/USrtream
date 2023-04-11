@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Application Root</summary>
+	/// <summary>Home Page</summary>
 	[PublishedModel("home")]
 	public partial class Home : PublishedContentModel, ICommonPageSettings, IFooterControls, ILandingPageHeaderSettings
 	{

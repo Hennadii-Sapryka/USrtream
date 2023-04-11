@@ -1,0 +1,51 @@
+﻿
+
+@using Srtream.Extensions
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Services;
+
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPost>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+
+
+@{
+    Layout = "_Layout.cshtml";
+
+    var blogModel = Model.Parent<Blog>();
+
+    var suggestions = Model.Parent.Children<BlogPost>()
+        .Except(new[] { Model })
+        .ToList();
+}
+
+@section Head{
+<link rel="stylesheet" href="@Url.Content("~/css/blog.css")" />
+<link rel="stylesheet" href="@Url.Content("~/css/mobile/blog.css")" />
+<link rel="stylesheet" href="@Url.Content("~/css/blog-post.css")" />
+<link rel="stylesheet" href="@Url.Content("~/css/mobile/blog-post.css")" />
+}
+
+<div class="content-container">
+    <div class="blog-post">
+        <img class="blog-post-thumbnail" src="@Model.Image?.GetCropUrl()" />
+        <div class="blog-post-card-header">
+            <div class="blog-category">@Model.Category</div>
+        </div>
+        <h1 class="blog-post-title">@Model.Name</h1>
+        <div class="blog-post-header">
+
+            <span class="blog-post-date">Published on @Model.CreateDate.GetFormattedDate()</span>
+        </div>
+        <div class="blog-content">@Model.BlogPostContent</div>
+    </div>
+
+    <div class="blog-post-suggestions-title">You May also like</div>
+    <div class="blog-posts clearfix">
+        @foreach (var blogPost in suggestions)
+        {
+            @await Html.PartialAsync("_BlogPost", blogPost)
+        }
+    </div>
+</div>

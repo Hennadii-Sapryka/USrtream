@@ -14,16 +14,14 @@
 
 @{
     var onHomePage = (bool)(ViewBag.OnHomePage ?? false);
-    var rootType = Model.Root().GetType();
     var home = PageManager.GetRoot<Home>();
+    var pages = Model.Root().Children();
 
     var cropUrl = home.BackgroundImage.GetCropUrl("Landing Page Header", UrlGenerator, useFocalPoint: true);
     var backgroundImageUrl = $"{home.BackgroundImage.Src}";
 }
 
 <div class="site-header">
-
-
 
     <style>
         .nav-background {
@@ -40,8 +38,10 @@
                 <div class="logo-site">www.living-stream.com</div>
             </div>
         </a>
-
-
+            @foreach (var item in pages)
+            {
+                <a class="nav-item" href="@item.Url()">@item.Name</a>
+            }
     </div>
 
 </div>

@@ -1,0 +1,49 @@
+﻿
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Blog>
+@{
+	Layout = "_Layout.cshtml";
+}
+
+@{
+    Layout = "_Layout";
+
+    var blogPosts = Model.Children<BlogPost>().ToList();
+    
+    var categories = blogPosts
+        .Select(_ => _.Category)
+        .Distinct()
+        .ToList();
+}
+
+@section Head{
+    <link rel="stylesheet" href="@Url.Content("~/css/blog.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/blog.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/blog-post.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/blog-post.css")" />
+}
+
+<div class="content-container blog-gallery-page">
+    <h1 class="main-page-title align-left">@Model.Name</h1>
+
+    <div class="flex search-panel">
+        <input type="text" class="search-box-item search-input" name="searchTerm" placeholder="Search..." />
+        <button type="submit" class="btn background-secondary search-button">
+            <img src="@Url.Content("~/svg/search.svg")" alt="Search icon">
+        </button>
+    </div>
+     <div class="blog-categories">
+         <div class="blog-category-option selected">All</div>
+    @foreach (var category in categories)
+    {
+         <div class="blog-category-option">@category</div>
+    }
+     </div>
+    <div class="blog-posts clearfix">
+        @foreach(var blogPost in blogPosts)
+        {
+            @await Html.PartialAsync("_BlogPost", blogPost);
+        }
+    </div>
+</div>
