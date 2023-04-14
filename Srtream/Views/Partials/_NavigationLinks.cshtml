@@ -1,0 +1,28 @@
+﻿@model IPublishedContent
+
+@using Stream.UmbracoServices.Interfaces;
+@using Stream.ViewModels.Navigation_Menu
+@inject IUmbracoPageManager PageManager
+@inject INavigationMenuService NavigationMenuService
+
+@{
+    var navigationMenu = await NavigationMenuService.GetFooterNavigationMenu();
+}
+
+<div class="container-footer-nav">
+    <div class="footer-menu">
+        @if (navigationMenu?.Items is not null)
+        foreach (var item in navigationMenu?.Items)
+        {
+            if (item is not NavSectionViewModel navSection) continue;
+
+            <div class="footer-menu--section">
+                <div class="footer-menu--section-title">@navSection.Name</div>
+                @foreach (var children in navSection.Links)
+                {
+                    <a class="footer-menu--item" href="@children.Url">@children.Label</a>
+                }
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,21 @@
+@media(max-width:768px) {
+    .blog-header {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+        .blog-header .search-panel {
+            justify-content: space-between;
+        }
+
+        .blog-header .search-input {
+            width: calc(100% - 48px);
+        }
+
+        .blog-categories {
+            max-width: 100%;
+            white-space: nowrap;
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+}

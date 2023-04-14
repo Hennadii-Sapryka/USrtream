@@ -1,0 +1,135 @@
+.table-container {
+    position: relative;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-radius: 4px;
+    background: white;
+}
+
+thead {
+    position: sticky;
+}
+
+tr + tr {
+    border-top: 1px solid #EEEEEE;
+}
+
+tr:hover td {
+    background: #F7F7F7;
+}
+
+td, th {
+    padding: 8px 12px;
+    height: 50px;
+}
+
+th {
+    font-family: ElevenShares-Bold;
+    background: #F1F5F9;
+    font-size: 12px;
+}
+
+    th a,
+    th span {
+        font-family: ElevenShares-Bold;
+        color: #212121;
+        text-decoration: none !important;
+        text-align: inherit;
+    }
+
+    th:hover * {
+        color: #283593;
+    }
+
+.color-link {
+    color: #005de7;
+}
+
+.sort-icon {
+    margin-left: 8px;
+    width: 16px;
+    height: 10px;
+    margin-top: 3px;
+}
+
+td,
+td a {
+    font-size: 13px;
+    font-family: ElevenShares-Alt-SemiBold;
+    text-decoration: none !important;
+}
+
+th.align-right > .flex {
+    justify-content: flex-end;
+}
+
+th.align-center > .flex {
+    justify-content: center;
+}
+
+.table-pages {
+    background: white;
+    margin: 0 auto;
+    bottom: 0;
+    padding: 15px 0;
+}
+
+.page-button {
+    height: 28px;
+    min-width: 28px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: ElevenShares-Alt-SemiBold;
+    border-radius: 6px;
+    color: #787878;
+    cursor: default;
+}
+
+    .page-button.clickable {
+        color: black;
+        cursor: pointer;
+    }
+
+        .page-button.clickable:hover {
+            background: #eaeaea;
+        }
+
+    .page-button.current-page {
+        font-family: ElevenShares-Alt-Bold;
+        background: #283593;
+        color: white;
+    }
+
+.page-prev > img,
+.page-next > img {
+    color: #787878;
+}
+
+.page-prev.clickable > img,
+.page-next.clickable > img {
+    color: #283593;
+}
+
+.page-prev {
+    margin-right: 28px;
+}
+
+.page-next {
+    margin-left: 28px;
+}
+
+.page-button > img {
+    margin-top: 7px;
+}
+
+.page-size-selector {
+    font-family: ElevenShares-Alt-SemiBold;
+    font-size: 13px;
+    line-height: 28px;
+}

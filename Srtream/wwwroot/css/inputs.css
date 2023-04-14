@@ -1,0 +1,36 @@
+﻿.form-subtitle {
+    margin-top: 24px;
+    margin-bottom: 64px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-family: ElevenShares-Alt-Bold;
+    color: #94A3B8;
+}
+
+.form-input {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 0 18px;
+    font-family: ElevenShares-Alt-Regular;
+    font-size: 14px;
+}
+
+    .form-input:focus {
+        outline: none;
+    }
+
+.field-validation-error {
+    color: red;
+    font-family: 'ElevenShares-Alt-SemiBold';
+    font-size: 13px;
+}

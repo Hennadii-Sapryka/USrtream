@@ -1,0 +1,211 @@
+﻿@media(max-width:768px) {
+    .site-header {
+        height: 70px;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 24px;
+        left: 16px;
+        z-index: 3;
+    }
+
+    div.content-container.header-container.clearfix {
+        background-color: #04082E;
+        z-index: 4;
+        position: fixed;
+    }
+
+    div.logo-site {
+        font-size: 6px;
+        letter-spacing: 1px;
+        text-align: center;
+        padding: 7px 0 0 0;
+    }
+
+    div.logo-title {
+        font-size: 12px;
+        height: 20px;
+        border-bottom-style: solid;
+        border-width: thin;
+        border-top-style: solid;
+        border-color: #FFEB3B;
+        width: 101px;
+        text-align: center;
+    }
+
+    .head__burger {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: 25px;
+        margin-top: 10px;
+        width: 19px;
+        height: 16px;
+        z-index: 3;
+    }
+
+        .head__burger span {
+            position: absolute;
+            background-color: #FFEB3B;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: 7px;
+            transition: all 0.3s ease 0s;
+            border-radius: 13px;
+        }
+
+        .head__burger:before,
+        .head__burger:after {
+            content: ' ';
+            background-color: #FFEB3B;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+            border-radius: 13px;
+        }
+
+        .head__burger:before {
+            top: 0;
+        }
+
+        .head__burger:after {
+            bottom: 0;
+        }
+
+        .head__burger.active span {
+            transform: scale(0);
+        }
+
+        .head__burger.active:before {
+            transform: rotate(45deg);
+            top: 9px
+        }
+
+        .head__burger.active:after {
+            transform: rotate(-45deg);
+            bottom: 5px;
+        }
+
+        .head__burger span:first-child {
+            transform: scale(0);
+        }
+
+        .head__burger.active span:first-child {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 235, 59, 1);
+            margin-left: -5px;
+            top: -5px;
+            transform: rotate(45deg);
+            background: none;
+        }
+
+    .nav-menu {
+        display: block;
+        position: fixed;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+        .nav-menu.active {
+            max-height: 100vh;
+            padding: 70px 0;
+            overflow: auto;
+            background-color: #04082E;
+            z-index: 2;
+        }
+
+    .nav-item,
+    .nav-section-name,
+    .nav-section-items .nav-item {
+        display: block;
+        text-align: left;
+        font-size: 18px;
+        line-height: 50px;
+        padding-left: 30px;
+        text-decoration: none;
+        color: #FFF06D;
+        background: transparent;
+        font-family: ElevenShares-Regular;
+    }
+
+    .nav-item,
+    .nav-section {
+        margin-left: 0;
+    }
+
+        .nav-item-alternate,
+        .nav-item:hover,
+        .nav-item-current {
+            color: white;
+        }
+
+    .nav-item-current {
+        font-family: ElevenShares-Bold;
+    }
+
+    .nav-section {
+        display: block;
+        position: relative;
+        text-align: center;
+        cursor: default;
+    }
+
+    .nav-section-name {
+        color: white;
+        font-family: ElevenShares-Bold;
+    }
+
+    .nav-section:hover > .nav-section-items {
+        max-height: initial;
+        opacity: 1;
+    }
+
+    .nav-section-items {
+        position: relative;
+        left: initial;
+        top: initial;
+        display: block;
+        text-align: left;
+        box-shadow: none;
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+        .nav-section-items .nav-item {
+            padding-left: 50px;
+        }
+
+    .nav-section .nav-section-arrow {
+        display: inline-block;
+        left: 10px;
+        position: relative;
+        top: -3px;
+        height: 12px;
+        width: 12px;
+        border-left: 2px solid rgba(255, 235, 59, 1);
+        border-top: 2px solid rgba(255, 235, 59, 1);
+        transform: rotate(-135deg);
+        transition: all 0.3s ease 0s;
+        border-radius: 1.3px;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .nav-section:hover .nav-section-arrow {
+        transform: rotate(45deg);
+        top: 4px;
+    }
+}

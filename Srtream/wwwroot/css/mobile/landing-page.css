@@ -1,0 +1,44 @@
+﻿@media(max-width:768px) {
+    .site-header {
+        height: auto;
+    }
+
+    .landing-page-section {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .content-container.home-banner.direction-unset {
+        margin-top: 0px;
+        flex-direction: column;
+        padding: 150px 16px 40px 16px;
+    }
+
+    .home-banner-section.home-banner-cta {
+        position: relative;
+        top: auto;
+        width: auto;
+        padding: 0 0 0 0;
+    }
+
+    h1.home-cta-title {
+        height: 39px;
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .home-cta-text {
+        line-height: 1.8;
+    }
+
+    .home-banner-section.flex.direction-reverse {
+        width: auto;
+        margin-top: 10px;
+        display: grid;
+    }
+
+    .btn-cta {
+        position: relative;
+        margin-bottom: 40px;
+    }
+}

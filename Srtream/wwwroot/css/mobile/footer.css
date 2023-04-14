@@ -1,0 +1,97 @@
+﻿@media(max-width:768px) {
+    .container-website-info,
+    .container-footer-nav {
+        float: none;
+        width: 100%;
+    }
+
+    .site-footer {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+        text-align: center;
+        background: #04082E;
+    }
+
+    .site-copyright {
+        padding: 0 0 47px;
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-media-container {
+        text-align: center;
+        padding: 11px 0 49px;
+        margin: 0 auto;
+    }
+
+    .social-link {
+        margin: 20px 18px 0 18px;
+    }
+
+    .social-icon {
+        margin-right: 0;
+    }
+
+    .footer-logo-container {
+        float: none;
+        color: white;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-logo-title {
+        font-size: 18px;
+        height: 20px;
+        display: inline-block;
+        padding: 0 0 30px 0;
+        position: relative;
+        font-family: ElevenShares-Bold;
+        border-bottom-style: solid;
+        border-width: thin;
+        border-top-style: solid;
+        border-color: #FFEB3B;
+        width: 150px;
+    }
+
+    .footer-logo-site {
+        position: relative;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .footer-menu {
+        display: block;
+        text-align: center;
+    }
+
+        .footer-menu * {
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            pointer-events: none
+        }
+
+    .footer-menu--section-title {
+        text-align: center;
+    }
+
+    .footer-menu--section + .footer-menu--section {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .footer-menu--item {
+        font-family: ElevenShares-Regular;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 24px;
+    }
+
+    .footer-menu .footer-menu--section {
+        margin-top: 21px;
+        margin-bottom: 51px;
+        font-family: ElevenShares-Bold;
+        color: #FFFFFF;
+    }
+}

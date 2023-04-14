@@ -1,0 +1,196 @@
+﻿.search-button {
+    margin-left: 10px
+}
+
+.apply-button {
+    width: 140px;
+    height: 38px;
+    line-height: 36px;
+    font-size: 13px;
+    padding: 0 15px;
+}
+
+.search-panel .search-input {
+    font-family: ElevenShares-Regular;
+    font-size: 13px;
+    height: 38px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    width: 285px;
+    padding: 0 10px;
+}
+
+.search-panel .advanced-filter-toggle {
+    font-family: ElevenShares-Alt-Bold;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #283593;
+    margin-top: 10px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+.advanced-filter-container {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(19, 23, 62, 0.07);
+    border-radius: 4px;
+    transition: max-height .25s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+    .advanced-filter-container.advanced-filter-expanded {
+        max-height: 100vh;
+    }
+
+.advanced-filter-content {
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.advanced-filter-container form {
+    padding: 25px;
+}
+
+.advanced-filter-container .title {
+    font-family: ElevenShares-Regular;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.filter-group {
+    margin-top: 15px;
+    width: 300px;
+}
+
+.filter-header {
+}
+
+.filter-content {
+    width: 100%;
+}
+
+.filter-group input {
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-family: ElevenShares-Regular;
+    font-style: normal;
+    font-size: 13px;
+    height: 38px;
+    line-height: 36px;
+    color: #212121;
+    padding: 0 10px;
+}
+
+.filter-group .filter-header {
+    font-family: ElevenShares-Alt-Bold;
+    font-size: 13px;
+    line-height: 16px;
+    color: #94A3B8;
+}
+
+.filter-content-minmax {
+    width: 140px;
+}
+
+.filter-group .filter-content {
+    margin-top: 8px
+}
+
+.search-panel button[type=submit] {
+    border: none;
+    padding: 0;
+    height: 38px;
+    width: 38px;
+}
+
+.filter-group .radio-group {
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    padding: 0 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .filter-group .radio-group:hover {
+        background: #efefef;
+    }
+
+    .filter-group .radio-group input {
+        border: 1px solid #CBD5E1;
+        box-sizing: border-box;
+        height: inherit;
+        cursor: pointer;
+    }
+
+    .filter-group .radio-group .radio-label {
+        padding-left: 8px;
+        font-family: ElevenShares-Regular;
+        font-size: 13px;
+        color: #212121;
+        cursor: pointer;
+    }
+
+.filter-group .select2-container {
+    width: 100% !important;
+}
+
+.filter-group .select2-selection {
+    min-height: 38px;
+    line-height: 36px;
+    padding: 0 !important;
+    padding-right: 25px !important;
+    border: 1px solid #CBD5E1 !important;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    color: #94A3B8 !important;
+}
+
+.filter-group .select2-selection__choice {
+    height: 28px;
+    line-height: 26px;
+    font-size: 12px;
+    font-family: 'ElevenShares-Bold';
+    margin: 2px !important;
+    background: #5C6BC0 !important;
+    border-color: #283593 !important;
+    color: #283593;
+}
+
+.filter-group .select2-selection__choice__display {
+    font-family: 'ElevenShares-Alt-Bold';
+    color: white;
+}
+
+.filter-group .select2-selection__choice__remove {
+    border-right-color: #283593 !important;
+    color: white !important;
+}
+
+    .filter-group .select2-selection__choice__remove:hover {
+        background: #7986CB !important;
+    }
+
+.filter-group .select2-search {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    margin-top: 3px;
+}
+
+.filter-group .select2-search__field {
+    height: 32px !important;
+    line-height: 32px;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    font-family: 'ElevenShares-Alt-Regular' !important;
+}
+
+.filter-group .select2-selection__clear {
+    margin-top: 0 !important;
+}

@@ -1,0 +1,20 @@
+@media(max-width:768px) {
+    #notification {
+        top: 86px;
+        right: 0;
+        margin: 0 16px;
+        width: 90vw;
+    }
+
+    .notification-close-btn {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        text-align: right;
+        width: auto;
+    }
+
+    #notification:hover .notification-close-btn {
+        width: 20px;
+    }
+}

@@ -1,0 +1,22 @@
+﻿@media(max-width:768px) {
+    .columns-section-row {
+        padding: 16px 0;
+        display: block;
+    }
+
+    .columns-section-column {
+        width: auto;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 30px rgba(136, 147, 164, 0.16);
+    }
+
+        .columns-section-column + .columns-section-column {
+            margin-top: 16px;
+        }
+
+        .columns-section-column .content-container {
+            padding-left: 8px;
+            padding-top: 24px
+        }
+}

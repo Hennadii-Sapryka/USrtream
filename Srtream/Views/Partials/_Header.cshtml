@@ -1,5 +1,6 @@
-﻿@model IPublishedContent
+﻿
 
+@model IPublishedContent
 @using Stream.UmbracoServices.Interfaces
 @using Microsoft.AspNetCore.Mvc
 @using Umbraco.Cms.Core.Media
@@ -11,37 +12,40 @@
 @inject IMediaService MediaService
 @inject IUmbracoPageManager PageManager
 
-
 @{
     var onHomePage = (bool)(ViewBag.OnHomePage ?? false);
     var home = PageManager.GetRoot<Home>();
-    var pages = Model.Root().Children();
-
-    var cropUrl = home.BackgroundImage.GetCropUrl("Landing Page Header", UrlGenerator, useFocalPoint: true);
-    var backgroundImageUrl = $"{home.BackgroundImage.Src}";
 }
 
 <div class="site-header">
 
-    <style>
-        .nav-background {
-            background-image: url("@backgroundImageUrl");
-        }
-    </style>
+    @if (home is not null && (home.BackgroundImage?.HasImage() ?? false))
+    {
+        
+        var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Landing Page Header");
+    
+        <style>
+            .nav-background {
+                background-image: url("@backgroundImageUrl");
+            }
+        </style>
 
-    <div class="nav-background"></div>
+        <div class="nav-background"></div>
+    }
 
     <div class="content-container header-container clearfix">
         <a href="@home.Url()">
             <div class="logo-container">
                 <div class="logo-title">Living Stream</div>
-                <div class="logo-site">www.living-stream.com</div>
+                <div class="logo-site">www.lvivchurch.com</div>
             </div>
         </a>
-            @foreach (var item in pages)
-            {
-                <a class="nav-item" href="@item.Url()">@item.Name</a>
-            }
+
+        @await Html.PartialAsync("_Navigation", Model)
     </div>
 
+    @if (onHomePage)
+    {
+        @await Html.PartialAsync("_HomeBanner", Model)
+    }
 </div>

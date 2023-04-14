@@ -1,0 +1,145 @@
+﻿@media(max-width:768px) {
+    .content-container {
+        width: 100%;
+    }
+
+    .main-page-title {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    h2.profile-container-title {
+        font-size: 18px;
+    }
+
+    .profile-row .profile-column, .profile-row .profile-column + .profile-column {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+        height: 239px;
+    }
+
+    .profile-row-inner.profile-column .btn-secondary {
+        height: 68px;
+        position: relative;
+        bottom: -297px;
+        padding: 15px;
+        display: block;
+    }
+
+    .profile-pass-icon, .profile-edit-icon {
+        position: absolute;
+    }
+
+    .profile-edit-icon {
+        right: 0;
+    }
+
+    .profile-row-inner .profile-container-inner {
+        padding-top: 15px;
+    }
+
+    /*Profile Modal block*/
+    .modal-container.show .modal {
+        width: 100%;
+        height: 100%;
+        top: 60%;
+        left: auto;
+        padding: 0 16px;
+        margin: 0;
+        background-color: #FFFFFF;
+        border-radius: 16px;
+        position: relative;
+        display: block;
+    }
+
+    .modal-container.show .modal-edit {
+        top: 58%;
+    }
+
+    .modal-email-textbox .modal-btn {
+        height: 68px;
+        margin-top: 40px;
+    }
+
+    .modal .profile-container-title.modal-title {
+        margin: 24px 0 0 0;
+    }
+
+    .modal-container.show {
+        left: 0;
+        z-index: 3;
+    }
+
+        .modal-container.show .profile-description {
+            width: 100%;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+    .show .profile-cross-icon {
+        right: 22px;
+        position: absolute;
+    }
+
+    #modal_container .modal {
+        top: 71%
+    }
+
+    .profile-buttons-container.flex.space-between a:last-child {
+        position: absolute;
+        right: 0;
+    }
+
+    /*Profile Modal block*/
+    .modal-container.show .modal {
+        width: 100%;
+        height: 100%;
+        top: 60%;
+        left: auto;
+        padding: 0 16px;
+        margin: 0;
+        background-color: #FFFFFF;
+        border-radius: 16px;
+        position: relative;
+        display: block;
+    }
+
+    .modal-container.show .modal-edit {
+        top: 58%;
+    }
+
+    .modal-email-textbox .modal-btn {
+        height: 68px;
+        margin-top: 40px;
+    }
+
+    .modal .profile-container-title.modal-title {
+        margin: 24px 0 0 0;
+    }
+
+    .modal-container.show {
+        left: 0;
+        z-index: 3;
+    }
+
+        .modal-container.show .profile-description {
+            width: 100%;
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+    .show .profile-cross-icon {
+        right: 22px;
+        position: absolute;
+    }
+
+    #modal_container .modal {
+        top: 71%
+    }
+
+    .profile-buttons-container.flex.space-between a:last-child {
+        position: absolute;
+        right: 0;
+    }
+}

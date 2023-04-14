@@ -1,0 +1,52 @@
+﻿.color-primary {
+    color: #212121;
+}
+
+.color-secondary {
+    color: #475569;
+}
+
+.color-secondary-heavy {
+    color: #607D8B;
+}
+
+.color-label {
+    color: #94A3B8;
+}
+
+.color-link {
+    color: #283593;
+}
+
+.color-subtitle {
+    color: #757575;
+}
+
+.color-white,
+.color-white:hover {
+    color: white;
+}
+
+.background-main {
+    background: #FFEB3B;
+}
+
+    .background-main:hover {
+        background: #FFF176;
+    }
+
+.background-secondary {
+    background: linear-gradient(68.35deg, rgba(4, 8, 46, 0.95) 40.69%, rgba(26, 35, 126, 0.87) 71.7%);
+}
+
+    .background-secondary:hover {
+        background: linear-gradient(68.35deg, rgb(0 0 0 / 95%) 40.69%, rgb(26 35 126 / 96%) 71.7%);
+    }
+
+.background-white {
+    background: white;
+}
+
+    .background-white:hover {
+        background: #E9E9E9;
+    }

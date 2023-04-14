@@ -1,0 +1,43 @@
+﻿/*  1. Header section, burger menu
+    2. Landing Page
+    3. Footer
+    4. Login, SignUp, Password
+    5. Profile
+    6. Profile Modal block
+    7. Advanced filter
+    8. Pricing Plans
+    9. Tables 
+    10. Company Details
+    11. Video
+    */
+
+/*Header section, burger menu*/
+.head__burger, .button-group {
+    display: none;
+    height: 30px;
+}
+
+@media(max-width:768px) {
+    body.lock {overflow: hidden;}
+
+    .user-section .form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.form-group a.link { font-size: 16px;}
+
+    .main-page-title {
+        font-size: 24px;
+    }
+
+    .main-section > .content-container {
+        padding: 0 16px;
+    }
+
+    .password-form {padding: 169px 0 0 0;}
+
+    .login-form {padding: 33px 0 0 0;}
+
+    input.btn.btn-main.background-main.full-width{margin-bottom: 40px;}
+}

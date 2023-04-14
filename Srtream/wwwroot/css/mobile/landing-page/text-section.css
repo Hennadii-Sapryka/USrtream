@@ -1,0 +1,23 @@
+﻿@media(max-width:768px) {
+    .text-section-title {
+        color: #212121;
+        padding-bottom: 25px;
+    }
+
+    .text-section-content {
+        color: #424242;
+    }
+
+        .text-section-content p {
+            font-family: ElevenShares-Alt-Regular;
+        }
+
+            .text-section-content p + p {
+                padding-top: 10px;
+            }
+
+        .text-section-content strong {
+            color: #212121;
+            font-family: ElevenShares-Bold;
+        }
+}

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Stream.UmbracoServices.Interfaces;
+using Stream.UmbracoServices;
 using Stream.UmbracoServices.Implementation;
 
 using Umbraco.Cms.Core.Configuration;
@@ -42,6 +44,7 @@ namespace Srtream
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IUmbracoPageManager, UmbracoPageManager>();
+            services.AddTransient<INavigationMenuService, NavigationMenuService>();
 
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()

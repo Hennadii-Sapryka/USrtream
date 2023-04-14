@@ -17,8 +17,9 @@
       <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) Or $(RuntimeIdentifier.StartsWith('win')) Or ('$(RuntimeIdentifier)' == '' And !$([MSBuild]::IsOSPlatform('osx')))" />
     </ItemGroup>
     <ItemGroup>
+      <Folder Include="Services\" />
+      <Folder Include="SurfaceControllers\" />
       <Folder Include="umbraco\models\" />
-      <Folder Include="wwwroot\css\mobile\" />
     </ItemGroup>
 
 
@@ -84,6 +85,20 @@
     </ItemGroup>
     <ItemGroup>
       <None Remove="C:\Users\User\.nuget\packages\umbraco.sqlserverce\4.0.0.1\build\..\runtimes\win-x64\native\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Update="wwwroot\css\footer.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\header.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\theme.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

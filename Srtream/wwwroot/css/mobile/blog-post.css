@@ -1,0 +1,10 @@
+@media(max-width:768px) {
+    .blog-post-thumbnail {
+        height: auto;
+    }
+
+    .blog-post-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}

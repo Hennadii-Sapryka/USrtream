@@ -1,0 +1,22 @@
+﻿.site-content {
+    background: #F8FAFC;
+}
+
+.checkout-container {
+    width: 70%;
+    padding-top: 30px;
+}
+
+.subscription-plan-checkout {
+    background: white;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 24%);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.subscription-plan-title {
+    font-family: ElevenShares-Alt-SemiBold;
+}
+
+.subscription-plan-features {
+}

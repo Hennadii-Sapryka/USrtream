@@ -1,0 +1,112 @@
+﻿.webinar-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.02em;
+    color: #212121;
+}
+
+.webinar-flier-container {
+    width: 750px;
+    height: 420px;
+    margin-bottom: 25px;
+    background: no-repeat;
+    background-size: cover;
+}
+
+.webinar-description-container {
+    margin-top: 24px;
+}
+
+    .webinar-description-container label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #000000;
+    }
+
+    .webinar-description-container p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #1E293B;
+        margin-top: 8px;
+}
+
+.webinar-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 32px;
+    gap: 10px;
+    width: 387px;
+    height: 55px;
+    background: #FFEB3B;
+    border-radius: 6px;
+    margin-top: 31px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #283593;
+    text-decoration: none;
+}
+.disabled-webinar-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 32px;
+    gap: 10px;
+    width: 387px;
+    height: 55px;
+    background: rgba(18, 22, 60, 0.08);
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #283593;
+    margin-top: 31px;
+    margin-bottom: 23px;
+}
+
+.webinar-date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: rgba(30, 41, 59, 0.5);
+}
+
+@media(max-width:768px) {
+    .main-section {
+        padding-top: 0;
+    }
+
+    .webinar-flier-container {
+        width: calc(100% + 32px);
+        margin: 0 -16px;
+        height: 667px;
+        background: no-repeat;
+        background-size: cover;
+    }
+
+    .webinar-link {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .webinar-description-container label {
+        font-family: ElevenShares-Bold;
+        font-weight: 100;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,34 @@
+﻿.columns-section {
+}
+
+.columns-section-row {
+    padding: 0 80px;
+}
+
+.columns-section-column {
+    width: 360px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 24%);
+}
+
+    .columns-section-column .content-container {
+        width: 100%;
+    }
+
+    .columns-section-column .text-section {
+        font-family: ElevenShares-Bold;
+        padding: 40px 30px;
+    }
+
+    .columns-section-column .text-section-title {
+        font-size: 16px;
+    }
+
+    .columns-section-column .text-section-content {
+        font-size: 16px;
+    }
+
+        .columns-section-column .text-section-content p + p {
+            padding-top: 10px;
+        }

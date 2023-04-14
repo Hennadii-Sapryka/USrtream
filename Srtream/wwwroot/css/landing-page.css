@@ -1,0 +1,201 @@
+﻿.site-header {
+    height: 600px;
+}
+
+.site-content {
+    background: #FAFAFA;
+}
+
+.home-banner {
+    margin-top: 75px;
+}
+
+.home-banner-cta {
+    padding-right: 50px;
+}
+
+.home-banner-section {
+    width: 50%;
+}
+
+.home-cta-title {
+    color: white;
+    font-size: 40px;
+}
+
+.home-cta-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 36px;
+}
+
+.btn-cta {
+    font-size: 16px;
+    font-family: ElevenShares-Bold;
+    background: #FFEB3B;
+    padding: 18px 32px;
+    border-radius: 6px;
+    background: #FFEB3B;
+}
+
+    .btn-cta:hover {
+        background: #FFF176;
+    }
+
+.feature-card {
+    background: linear-gradient(206.22deg, rgba(99, 117, 255, 0.62) 17.36%, rgba(26, 39, 135, 0.9) 86.1%);
+    width: 170px;
+    height: 200px;
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #FFEB3B;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .feature-card + .feature-card {
+        margin-right: 24px;
+    }
+
+    .feature-card > span {
+        font-family: ElevenShares-SemiBold;
+    }
+
+    .feature-card:hover {
+        background: linear-gradient(206.34deg, #FFF06C 13.89%, #DFCA13 90.91%);
+        color: black;
+    }
+
+.feature-icon-container {
+    border: 2px solid #FFEB3B;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.feature-card:hover .feature-icon-container {
+    border-color: black;
+}
+
+.feature-icon {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.landing-page-section {
+    padding-top: 60px;
+    margin: 0;
+}
+
+.tweet-item {
+    border-radius: 5px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 0 10px -2px rgb(0 0 0 / 10%);
+}
+
+.tweet-item + .tweet-item {
+    margin-top: 18px;
+}
+
+.tweet-image {
+    display: block;
+    width: 100%;
+}
+
+.tweet-date {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #9E9E9E;
+}
+
+.tweet-body {
+    padding: 18px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #757575;
+}
+
+h3 + h6 {
+    padding: 24px 0;
+}
+
+p {
+    color: #616161;
+}
+
+.how-it-works-stocks-table {
+    padding: 45px 0;
+    z-index: 0;
+}
+
+    .how-it-works-stocks-table img {
+        box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        width: 100%;
+    }
+
+.halfway-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    background: #ECF0F7;
+}
+
+.how-it-works-section {
+    padding: 30px 0;
+    background: #ECF0F7;
+}
+
+.how-it-works-card {
+    width: 360px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 5px;
+}
+
+.how-it-works-card-title {
+    font-family: ElevenShares-Bold;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+.how-it-works-card-text {
+    font-size: 16px;
+    color: #616161;
+    white-space: pre-wrap;
+}
+
+.text-section-background {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+    .text-section-background .background {
+        pointer-events: none;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+    }
+.background-align-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.background-align-left {
+    left: 0px;
+}
+.background-align-right {
+    right: 0px
+}

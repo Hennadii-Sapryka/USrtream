@@ -23,3 +23,52 @@
         <a href="@item.Url()">@item.Name</a>
     }
 </div>
+
+
+@*@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@section Head {
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/text-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/image-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/columns-section.css")" />
+
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/text-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/image-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/columns-section.css")" />
+}
+
+@functions {
+    string GetSectionTemplate(IPublishedContent section)
+    {
+        var path = "Landing Page";
+
+        return $"{path}";
+    }
+}
+
+@{
+    Layout = "_Layout";
+
+    ViewBag.OnHomePage = true;
+
+    var homeContent = Model.Children<Home>().FirstOrDefault();
+
+    if (homeContent is null) return;
+
+
+    var sections = new List<IPublishedContent>();
+
+    sections = sections.OrderBy(section => section.SortOrder).ToList();
+}
+
+@foreach (var section in sections)
+{
+    @await Html.PartialAsync(GetSectionTemplate(section), section)
+}*@

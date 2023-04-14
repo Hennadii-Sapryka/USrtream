@@ -17,7 +17,7 @@
                 <div class="footer-logo-site">www.living-stream.com</div>
             </div>
         <div class="social-media-container">
-            @*@await Html.PartialAsync("_NavigationLinks")*@
+            @await Html.PartialAsync("_NavigationLinks")
             @foreach (var socialLink in socialLinks)
             {
                 var image = socialLink.Value<IPublishedContent>("icon");

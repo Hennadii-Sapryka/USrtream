@@ -1,0 +1,39 @@
+﻿@font-face {
+    font-family: ElevenShares-Light;
+    src: url(/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Regular;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Bold;
+    src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-SemiBold;
+    src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Alt-Light;
+    src: url(/fonts/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Alt-Regular;
+    src: url(/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Alt-Bold;
+    src: url(/fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: ElevenShares-Alt-SemiBold;
+    src: url(/fonts/Inter-SemiBold.ttf);
+}

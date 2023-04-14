@@ -1,9 +1,9 @@
 ﻿* {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifRegular;
+    font-family: ElevenShares-Regular;
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: ElevenShares-Bold;
 }
 
 form {
@@ -17,7 +17,7 @@ form {
 }
 
 .site-content {
-    min-height: calc(100vh - 86px - 150px);
+    min-height: calc(100vh - 110px - 150px);
 }
 
 .content-container {
@@ -27,15 +27,9 @@ form {
     padding: 0;
 }
 
-.site-footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
-
 @media(max-width: 1280px) {
     .content-container {
-        width: 100%;
+        width: 100vw;
     }
 }
 
@@ -49,15 +43,15 @@ form {
     font-size: 32px;
 }
 
-*.align-left {
+.align-left {
     text-align: left;
 }
 
-*.align-right {
+.align-right {
     text-align: right;
 }
 
-*.align-center {
+.align-center {
     text-align: center;
 }
 
@@ -85,15 +79,15 @@ form {
     justify-content: space-between;
 }
 
-*.full-width {
+.full-width {
     width: 100%;
 }
 
-*.half-width {
+.half-width {
     width: 50%;
 }
 
-*.margin-auto {
+.margin-auto {
     margin: 0 auto;
 }
 
@@ -104,6 +98,18 @@ select {
     border: 1px solid #283593;
     border: 1px solid #EEEEEE;
     border-radius: 4px;
+}
+
+.btn {
+    font-size: 16px;
+    font-family: ElevenShares-Bold;
+    border-radius: 6px;
+    transition: background .1s ease-in-out;
+}
+
+.btn-main {
+    padding: 18px 32px;
+    border: 0;
 }
 
 .alert {
@@ -117,5 +123,6 @@ select {
 }
 
 .alert > div {
+    font-family: ElevenShares-Alt-SemiBold;
     font-size: 15px;
 }

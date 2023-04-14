@@ -1,0 +1,52 @@
+﻿@model IPublishedContent
+
+@using Stream.UmbracoServices.Interfaces
+@using Stream.ViewModels.Navigation_Menu
+@using NavigationSettings = Stream.ViewModels.NavigationSettings;
+@using Umbraco.Cms.Core.Security
+@inject IMemberManager MemberManager;
+@inject INavigationMenuService NavigationMenuService
+
+@{
+    var menu = await NavigationMenuService.GetNavigationMenu(Model);
+    if (menu is null) return;
+}
+<div class="head__burger" id="burger">
+    <span></span>
+    <span></span>
+</div>
+<div class="nav-menu flex">
+    @foreach (var item in menu.Items)
+    {
+        var className = "";
+
+        if (item is NavLinkViewModel navLink)
+        {
+            className = $"nav-item nav-item-{navLink.Style}";
+            if (navLink.IsCurrent) className = $"{className} nav-item-current";
+
+            <a href="@navLink.Url" class="@className">@navLink.Label</a>
+        }
+        else if (item is NavSectionViewModel navSection)
+        {
+            <div class="nav-section">
+                <div class="nav-section-name">
+                    @navSection.Name
+                    <div class="nav-section-arrow"></div>
+                </div>
+                <div class="nav-section-items">
+                    <div>
+                        @foreach (var link in navSection.Links)
+                        {
+                            className = $"nav-item nav-item-{link.Style}";
+                            if (link.IsCurrent) className = $"{className} nav-item-current";
+
+                            <a href="@link.Url" class="@className">@link.Label</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+

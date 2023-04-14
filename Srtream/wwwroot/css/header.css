@@ -22,11 +22,17 @@
     color: white !important;
     float: left;
     display: inline-block;
+    text-align: center;
 }
 
 .logo-title {
-    font-family: SemiBold;
+    font-family: ElevenShares-SemiBold;
     font-size: 20px;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-top-style: solid;
+    border-color: #FFEB3B;
+    width: 160px;
 }
 
 .logo-site {
@@ -48,7 +54,7 @@
     line-height: 30px;
     text-decoration: none;
     color: white;
-    font-family: SemiBold;
+    font-family: ElevenShares-SemiBold;
 }
 
 .nav-item,
@@ -63,7 +69,7 @@
     }
 
 .nav-item-current {
-    font-family: Bold;
+    font-family: ElevenShares-Bold;
 }
 
 .nav-section {
@@ -120,7 +126,6 @@
     }
 
 .nav-section-arrow {
-    position: absolute;
     top: 25px;
     left: 20px;
     height: 0;
@@ -129,8 +134,4 @@
     border-right: 5px solid transparent;
     border-bottom: 5px solid #120C56;
     display: none;
-}
-
-.nav-section:hover .nav-section-arrow {
-    display:block;
 }

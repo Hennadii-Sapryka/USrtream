@@ -1,0 +1,124 @@
+﻿.profile-main-title {
+    Width: 109px; 
+    Height: 39px; 
+    Top: 116px; 
+    Left: 40px
+}
+
+.profile-account-container {
+    width: 368px;
+    height: 277;
+    padding: 24px;
+    margin-right: 20;
+ 
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 5px 15px rgb(0 0 16 / 10%);
+    color: #1E293B;
+    position: relative;
+    z-index: 0;
+    transition: background, box-shadow, transform ease-in-out .1s;
+}
+
+.profile-container-title {
+    font-size: 14px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.profile-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 230px;
+    padding: 24px;
+}
+
+.profile-description {
+    font-family: ElevenShares-SemiBold;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+}
+
+.btn-main {
+    padding: 18px 32px;
+    border: 0;
+}
+
+.btn {
+    font-size: 16px;
+    font-family: ElevenShares-Bold;
+    border-radius: 6px;
+    transition: background .1s ease-in-out;
+}
+
+.background-main {
+    background: #FFEB3B;
+}
+
+.form-input {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 0 18px;
+    font-family: ElevenShares-Alt-Regular;
+    font-size: 14px;
+}
+
+.profile-pass-icon {
+    color: #5C6BC0;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../svg/profile/password-profile-rotate-logo.svg');
+}
+
+.profile-button-name {
+    font-family: ElevenShares-SemiBold;
+    font-size: 14px;
+    color: #283593;
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+}
+
+
+
+.modal-container {
+    background-color: rgba(0,0,0, 0.3);
+    height: 300;
+    width: 300;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+    .modal-container.show {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+.modal {
+    background-color: white;
+    width: 600;
+}

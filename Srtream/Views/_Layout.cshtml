@@ -1,18 +1,28 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
     Layout = null;
-
     var homePage = Model.Root();
 }
 
 <head>
-
     <link rel="stylesheet" href="@Url.Content("~/css/footer.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/theme.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/header.css")" />
-    
+
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/fonts.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/colors.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/theme.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/header.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/footer.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/inputs.css")" />
+
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/theme.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/header.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/footer.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/inputs.css")" />
+
     <meta name="viewport" content="width=device-width" />
 
     @RenderSection("Head", required: false)
@@ -27,13 +37,14 @@
 
         <div class="site-content clearfix">
             <div class="main-section">
-
+                <script type="text/javascript" src="@Url.Content("~/js/jquery-3.6.0.min.js")"></script>
+                <script type="text/javascript" src="@Url.Content("~/js/knockout-3.5.1.js")"></script>
+                <script type="text/javascript" src="@Url.Content("~/js/burger.js")"></script>
+                <script type="text/javascript" src="@Url.Content("~/js/mobileImage.js")"></script>
                 @RenderBody()
             </div>
         </div>
 
         @await Html.PartialAsync("_Footer", homePage)
     </div>
-
-
 </body>
