@@ -1,4 +1,5 @@
 ﻿
+using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace Stream.UmbracoServices.Implementation
 {
@@ -18,7 +19,7 @@ namespace Stream.UmbracoServices.Implementation
 
         public TPage GetPage<TPage>(Func<TPage, bool> filter = null) where TPage : class, IPublishedContent
         {
-            var applicationRoot = GetRoot<Umbraco.Cms.Web.Common.PublishedModels.Home>();
+            var applicationRoot = GetRoot<Home>();
             if (applicationRoot is null) return null;
 
             var pages = applicationRoot.Children<TPage>().ToList();

@@ -1,7 +1,5 @@
-﻿using Stream.UmbracoServices.Interfaces;
-using Stream.ViewModels.Navigation_Menu;
+﻿using Stream.ViewModels.Navigation_Menu;
 using Microsoft.AspNetCore.Mvc.Routing;
-using Stream.UmbracoServices.Interfaces;
 using System.Threading.Tasks;
 using Umbraco.Cms.Core.Security;
 using System.Collections.Generic;
@@ -15,9 +13,9 @@ namespace Stream.UmbracoServices
     {
         private readonly IUmbracoPageManager _pageManager;
         private readonly IMemberManager _memberManager;
-        private readonly Microsoft.AspNetCore.Mvc.IUrlHelper _urlHelper;
+        private readonly IUrlHelper _urlHelper;
 
-        private IPublishedContent _currentPage = null;
+        //private IPublishedContent _currentPage;
         private bool _isLoggedIn;
         private MemberIdentityUser _member = null;
 
@@ -36,7 +34,7 @@ namespace Stream.UmbracoServices
 
         public async Task<NavMenuViewModel> GetNavigationMenu(IPublishedContent currentPage)
         {
-            await Initialize(currentPage);
+            //await Initialize(currentPage);
 
             var navigationMenu = _pageManager.GetRoot<NavigationMenu>();
             if (navigationMenu is null) return null;
@@ -44,20 +42,15 @@ namespace Stream.UmbracoServices
             var navMenu = new NavMenuViewModel();
             foreach (var item in navigationMenu.Children())
             {
-                if (item is NavLink navLink)
+                if (item is NavLink navLink && navLink is not null)
                 {
                     var navLinkViewModel = await GetNavLinkViewModel(navLink);
-                    if (navLinkViewModel is null) continue;
-
                     navMenu.Items.Add(navLinkViewModel);
-                    continue;
                 }
 
-                if (item is NavSection navSection)
+                if (item is NavSection navSection && navSection is not null)
                 {
                     var navSectionViewModel = await GetNavSectionViewModel(navSection);
-                    if (navSectionViewModel is null) continue;
-
                     navMenu.Items.Add(navSectionViewModel);
                 }
             }
@@ -70,19 +63,16 @@ namespace Stream.UmbracoServices
 
         public async Task<NavMenuViewModel> GetFooterNavigationMenu()
         {
-            await Initialize(null);
+            //await Initialize(null);
 
             var navigationMenu = _pageManager.GetRoot<NavigationMenu>();
-            if (navigationMenu is null) return null;
 
             var navMenu = new NavMenuViewModel();
             foreach (var item in navigationMenu.Children())
             {
-                if (item is NavSection navSection)
-                {
+                if (item is NavSection navSection && navSection is not null)
+                { 
                     var navSectionViewModel = await GetNavSectionViewModel(navSection);
-                    if (navSectionViewModel is null) continue;
-
                     navMenu.Items.Add(navSectionViewModel);
                 }
             }
@@ -92,7 +82,7 @@ namespace Stream.UmbracoServices
 
         private async Task Initialize(IPublishedContent currentPage)
         {
-            _currentPage = currentPage;
+            //_currentPage = currentPage;
 
             _isLoggedIn = _memberManager.IsLoggedIn();
             if (!_isLoggedIn) return;
@@ -102,19 +92,13 @@ namespace Stream.UmbracoServices
 
         private async Task<NavSectionViewModel> GetNavSectionViewModel(NavSection navSection)
         {
-            if (navSection is null) return null;
-
             var navLinks = new List<NavLinkViewModel>();
 
             foreach (var navLink in navSection.Children<NavLink>())
             {
                 var viewModel = await GetNavLinkViewModel(navLink);
-                if (viewModel is null) continue;
-
                 navLinks.Add(viewModel);
             }
-
-            if (!navLinks.Any()) return null;
 
             return new()
             {
@@ -158,11 +142,6 @@ namespace Stream.UmbracoServices
 
         private async Task<NavLinkViewModel> GetNavLinkViewModel(NavLink navLink)
         {
-            if (navLink is null) return null;
-
-            if (navLink.LinkedPage is null) return null;
-
-            if (navLink.HideOnLandingPage && _currentPage is Home) return null;
 
             //if (navLink.ShowOnlyWithRequiredFeatures)
             //{
@@ -174,8 +153,7 @@ namespace Stream.UmbracoServices
             {
                 Label = navLink.Name,
                 Url = navLink.LinkedPage.Url(),
-                //Style = navLink.LinkStyle.ToLowerInvariant(),
-                IsCurrent = navLink.LinkedPage.Key == _currentPage?.Key
+                //IsCurrent = navLink.LinkedPage.Key == _currentPage?.Key
             };
         }
     }
