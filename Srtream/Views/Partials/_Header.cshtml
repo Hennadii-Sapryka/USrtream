@@ -22,8 +22,9 @@
     @if (home is not null && (home.BackgroundImage?.HasImage() ?? false))
     {
         
-        var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Landing Page Header");
-    
+        var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Image");
+        var backgroundImageUrl1 = home.BackgroundImage;
+  
         <style>
             .nav-background {
                 background-image: url("@backgroundImageUrl");
@@ -44,8 +45,5 @@
         @await Html.PartialAsync("_Navigation", Model)
     </div>
 
-    @if (onHomePage)
-    {
-        @await Html.PartialAsync("_HomeBanner", Model)
-    }
+
 </div>

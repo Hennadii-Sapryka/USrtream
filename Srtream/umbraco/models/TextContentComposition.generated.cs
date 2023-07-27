@@ -22,6 +22,16 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>Text Content</summary>
 	public partial interface ITextContentComposition : IPublishedElement
 	{
+		/// <summary>Align Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string AlignTitle { get; }
+
+		/// <summary>Alignt Text Content</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string AligntTextContent { get; }
+
 		/// <summary>Content Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -63,6 +73,32 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Align Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("alignTitle")]
+		public virtual string AlignTitle => GetAlignTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Align Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetAlignTitle(ITextContentComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "alignTitle");
+
+		///<summary>
+		/// Alignt Text Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aligntTextContent")]
+		public virtual string AligntTextContent => GetAligntTextContent(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Alignt Text Content</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetAligntTextContent(ITextContentComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "aligntTextContent");
 
 		///<summary>
 		/// Content Title

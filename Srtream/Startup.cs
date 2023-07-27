@@ -10,7 +10,8 @@ using Stream.UmbracoServices.Implementation;
 using Umbraco.Cms.Core.Configuration;
 using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.DependencyInjection;
-
+using Microsoft.AspNetCore.Mvc;
+using Umbraco.Extensions;
 
 namespace Srtream
 {
@@ -51,6 +52,7 @@ namespace Srtream
                 .AddWebsite()
                 .AddComposers()
                 .Build();
+           
 
             services.Configure<ModelsBuilderSettings>(options =>
             {

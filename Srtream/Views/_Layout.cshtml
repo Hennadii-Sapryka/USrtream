@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="@Url.Content("~/css/footer.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/theme.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/header.css")" />
-
     <link rel="stylesheet" href="@Url.Content("~/css/bootstrap.min.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/fonts.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/colors.css")" />
@@ -17,7 +16,6 @@
     <link rel="stylesheet" href="@Url.Content("~/css/header.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/footer.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/inputs.css")" />
-
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/theme.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/header.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/footer.css")" />
@@ -46,5 +44,8 @@
         </div>
 
         @await Html.PartialAsync("_Footer", homePage)
+
+
     </div>
+    @RenderSection("Scripts", required: false)
 </body>

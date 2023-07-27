@@ -3,15 +3,22 @@
 @using Umbraco.Cms.Web.Common.PublishedModels;
 
 @section Head {
-   @* <link rel="stylesheet" href="@Url.Content("~/css/la.css")" />*@
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/text-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/image-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/columns-section.css")" />
 
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/text-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/image-section.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/columns-section.css")" />
 }
 
 @{
     Layout = "_Layout.cshtml";
 
     var homePage = Model.Root().Children();
-    var homeContent = Model.Children<Home>().FirstOrDefault();
+    var homeContent = Model.Children<HomePageContent>().FirstOrDefault();
 
 }
 
@@ -25,24 +32,7 @@
 </div>
 
 
-@*@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
 
-@using Umbraco.Cms.Web.Common.PublishedModels;
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
-
-@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
-
-@section Head {
-    <link rel="stylesheet" href="@Url.Content("~/css/landing-page.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/text-section.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/image-section.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/landing-page/columns-section.css")" />
-
-    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/text-section.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/image-section.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/columns-section.css")" />
-}
 
 @functions {
     string GetSectionTemplate(IPublishedContent section)
@@ -58,7 +48,6 @@
 
     ViewBag.OnHomePage = true;
 
-    var homeContent = Model.Children<Home>().FirstOrDefault();
 
     if (homeContent is null) return;
 
@@ -71,4 +60,4 @@
 @foreach (var section in sections)
 {
     @await Html.PartialAsync(GetSectionTemplate(section), section)
-}*@
+}

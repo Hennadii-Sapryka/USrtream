@@ -1,0 +1,87 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.VideoGallery>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using System.Web
+@{
+    Layout = "_Layout.cshtml";
+    var mappedVideoBlogEntries = Model.Children<VideoGalleryEntry>().Select(x => new
+    {
+        id = x.Id,
+        title = x.Name,
+        description = x.Description,
+        thumbnailUrl = x.Thumbnail.Url(),
+        embeddedVideo = HttpUtility.HtmlDecode(x.EmbeddedVideo.ToString()),
+        createdDate = x.CreateDate
+    }).ToList();
+}
+
+<div class="content-container video-gallery-page" id="video-gallery">
+    <div>
+        <h1 class="main-page-title align-left">@Model.PageTitle</h1>
+        <div class="video-blogs">
+            <div data-bind="foreach: groupedVideoBlogs">
+                <div class="video-blogs-row" data-bind="foreach: $data">
+                    <div class="video-blog-item" data-bind="click: $root.handleVideoBlogSelection">
+                        <div class="thumbnail-container flex">
+                            <img class="thumbnail" data-bind="attr:{src: thumbnailUrl}" alt="thumbnail" />
+                            <img class="play-circle" src="~/svg/play-circle.svg" alt="play-circle" />
+                        </div>
+                        <div class="detail">
+                            <label class="title" data-bind="text: title"></label>
+                            <span class="date" data-bind="text: dayjs(createdDate).format('DD.MM.YYYY')"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-blog-modal" data-bind="visible: selectedVideoBlog(), with: selectedVideoBlog">
+        <div class="video-blog-modal-content">
+            <div class="modal-content-container">
+                <div class="blog-container">
+                    <div class="blog-video-container" data-bind="html: embeddedVideo">
+                    </div>
+                    <div class="blog-detail-container">
+                        <h3 class="title" data-bind="text: title"></h3>
+                        <span class="date" data-bind="text: dayjs(createdDate).format('DD.MM.YYYY')"></span>
+                        <p class="description" data-bind="text: description"></p>
+                    </div>
+                </div>
+                <div class="blog-suggestions-container">
+                    <div class="suggestions-header">
+                        <span class="header-text">You may also like</span>
+                        <img class="video-blog-close" src="~/svg/close.svg" data-bind="click: $root.closeVideoBlogModal" title="Close" />
+                    </div>
+                    <div class="suggestions-content">
+                        <div data-bind="foreach: videoBlogs">
+                            <div class="video-blog-suggestion" data-bind="click: $root.handleVideoBlogSelection, css:{active: id ===  $parent.id}">
+                                <div class="thumbnail-container flex">
+                                    <img class="thumbnail" data-bind="attr:{src: thumbnailUrl}" alt="thumbnail" />
+                                </div>
+                                <div class="detail">
+                                    <label class="title" data-bind="text: title"></label>
+                                    <span class="date" data-bind="text: dayjs(createdDate).format('DD.MM.YYYY')"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Head{
+<link rel="stylesheet" href="@Url.Content("~/css/video-blog.css")" />
+}
+
+@section Scripts
+    {
+<script type="text/javascript" src="@Url.Content("~/js/jquery-3.6.0.min.js")"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+    window.videoBlogs = @Html.Raw(Json.Serialize(mappedVideoBlogEntries));
+    window.numberOfItemsOnRow = @Model.ItemsPerRow;
+</script>
+<script type="text/javascript" src="@Url.Content("~/js/videoGallery.viewModal.js")"></script>
+}
