@@ -12,11 +12,7 @@ namespace Stream.UmbracoServices
     public class NavigationMenuService : INavigationMenuService
     {
         private readonly IUmbracoPageManager _pageManager;
-
-
-        public NavigationMenuService(
-            IUmbracoPageManager pageManager
-            )
+        public NavigationMenuService(IUmbracoPageManager pageManager)
         {
             _pageManager = pageManager;
         }
@@ -61,7 +57,6 @@ namespace Stream.UmbracoServices
 
             return navMenu;
         }
-
         private async Task<NavSectionViewModel> GetNavSectionViewModel(NavSection navSection)
         {
             var navLinks = new List<NavLinkViewModel>();

@@ -4,6 +4,9 @@
 
 .container-footer-nav {
     float: right;
+    position:absolute;
+    top:0px;
+    right:0px;
 }
 
 .site-footer {
@@ -13,7 +16,6 @@
 }
 
 .social-media-container {
-    width: 200px;
     text-align: left;
     padding: 30px 0;
 }
@@ -87,14 +89,14 @@
     text-align: left;
     font-family: 'ElevenShares-SemiBold';
     margin-bottom: 20px;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .footer-menu--item {
     display: block;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 13px;
+    font-size: 17px;
     margin-top: 16px;
 }
 

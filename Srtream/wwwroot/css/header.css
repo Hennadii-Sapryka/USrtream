@@ -46,11 +46,10 @@
     float: right;
 }
 
-.nav-item,
-.nav-section-name {
+.nav-item, .nav-section-name {
     position: relative;
     display: inline-block;
-    font-size: 13px;
+    font-size: 20px;
     line-height: 30px;
     text-decoration: none;
     color: white;
@@ -109,7 +108,7 @@
         color: white;
         margin: 0;
         padding: 0 16px;
-        font-size: 13px;
+        font-size: 17px;
         line-height: 40px;
         word-break: keep-all;
         white-space: nowrap;

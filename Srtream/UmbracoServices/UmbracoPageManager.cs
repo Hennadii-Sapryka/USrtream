@@ -11,7 +11,6 @@ namespace Stream.UmbracoServices.Implementation
         {
             contextAccessor = umbracoContextAccessor;
         }
-
         private IUmbracoContext Context()
         {
             return contextAccessor.EnsureUmbracoContext().UmbracoContext;

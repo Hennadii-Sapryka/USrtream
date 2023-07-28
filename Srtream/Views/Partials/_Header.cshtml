@@ -1,6 +1,4 @@
-﻿
-
-@model IPublishedContent
+﻿@model IPublishedContent
 @using Stream.UmbracoServices.Interfaces
 @using Microsoft.AspNetCore.Mvc
 @using Umbraco.Cms.Core.Media
@@ -18,19 +16,16 @@
 }
 
 <div class="site-header">
-
     @if (home is not null && (home.BackgroundImage?.HasImage() ?? false))
     {
-        
         var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Image");
         var backgroundImageUrl1 = home.BackgroundImage;
-  
+
         <style>
             .nav-background {
                 background-image: url("@backgroundImageUrl");
             }
         </style>
-
         <div class="nav-background"></div>
     }
 
@@ -44,6 +39,4 @@
 
         @await Html.PartialAsync("_Navigation", Model)
     </div>
-
-
 </div>

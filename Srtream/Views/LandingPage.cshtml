@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="@Url.Content("~/css/landing-page/text-section.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/landing-page/image-section.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/landing-page/columns-section.css")" />
-
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/text-section.css")" />
     <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/image-section.css")" />
@@ -16,14 +15,11 @@
 
 @{
     Layout = "_Layout.cshtml";
-
     var homePage = Model.Root().Children();
     var homeContent = Model.Children<HomePageContent>().FirstOrDefault();
-
 }
 
 <div>Landing page</div>
-
 <div>
     @foreach (var item in homePage)
     {
@@ -31,26 +27,19 @@
     }
 </div>
 
-
-
-
 @functions {
     string GetSectionTemplate(IPublishedContent section)
     {
         var path = "Landing Page";
-
         return $"{path}";
     }
 }
 
 @{
     Layout = "_Layout";
-
     ViewBag.OnHomePage = true;
 
-
     if (homeContent is null) return;
-
 
     var sections = new List<IPublishedContent>();
 
