@@ -22,9 +22,9 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>List Row Settings</summary>
 	public partial interface IListRowSettings : IPublishedElement
 	{
-		/// <summary>Item per row</summary>
+		/// <summary>Item per rows</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
-		int ItemPerRow { get; }
+		int ItemPerRows { get; }
 	}
 
 	/// <summary>List Row Settings</summary>
@@ -59,14 +59,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Item per row
+		/// Item per rows
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
-		[ImplementPropertyType("itemPerRow")]
-		public virtual int ItemPerRow => GetItemPerRow(this, _publishedValueFallback);
+		[ImplementPropertyType("itemPerRows")]
+		public virtual int ItemPerRows => GetItemPerRows(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Item per row</summary>
+		/// <summary>Static getter for Item per rows</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
-		public static int GetItemPerRow(IListRowSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "itemPerRow");
+		public static int GetItemPerRows(IListRowSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "itemPerRows");
 	}
 }

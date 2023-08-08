@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Landing Page Text Section</summary>
 	[PublishedModel("landingPageTextSection")]
-	public partial class LandingPageTextSection : PublishedContentModel, IBackgroundColorSetting, IBackgroundSection, ITextContentComposition
+	public partial class LandingPageTextSection : PublishedContentModel, IBackgroundColorSettings, IBackgroundSection, ITextContentComposition
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -54,7 +54,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[ImplementPropertyType("offset")]
-		public virtual int Offset => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetOffset(this, _publishedValueFallback);
+		public virtual int Offset => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetOffset(this, _publishedValueFallback);
 
 		///<summary>
 		/// Tone #1
@@ -62,7 +62,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("tone1")]
-		public virtual string Tone1 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetTone1(this, _publishedValueFallback);
+		public virtual string Tone1 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetTone1(this, _publishedValueFallback);
 
 		///<summary>
 		/// Tone #2
@@ -70,7 +70,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("tone2")]
-		public virtual string Tone2 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetTone2(this, _publishedValueFallback);
+		public virtual string Tone2 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetTone2(this, _publishedValueFallback);
 
 		///<summary>
 		/// Background Image: Background Section

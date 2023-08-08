@@ -18,9 +18,9 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	// Mixin Content Type with alias "backgroundColorSetting"
-	/// <summary>Background Color Setting</summary>
-	public partial interface IBackgroundColorSetting : IPublishedElement
+	// Mixin Content Type with alias "backgroundColorSettings"
+	/// <summary>Background Color Settings</summary>
+	public partial interface IBackgroundColorSettings : IPublishedElement
 	{
 		/// <summary>Offset</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
@@ -37,14 +37,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		string Tone2 { get; }
 	}
 
-	/// <summary>Background Color Setting</summary>
-	[PublishedModel("backgroundColorSetting")]
-	public partial class BackgroundColorSetting : PublishedElementModel, IBackgroundColorSetting
+	/// <summary>Background Color Settings</summary>
+	[PublishedModel("backgroundColorSettings")]
+	public partial class BackgroundColorSettings : PublishedElementModel, IBackgroundColorSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
-		public new const string ModelTypeAlias = "backgroundColorSetting";
+		public new const string ModelTypeAlias = "backgroundColorSettings";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
@@ -53,14 +53,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<BackgroundColorSetting, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<BackgroundColorSettings, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public BackgroundColorSetting(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public BackgroundColorSettings(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -77,7 +77,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 
 		/// <summary>Static getter for Offset</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
-		public static int GetOffset(IBackgroundColorSetting that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "offset");
+		public static int GetOffset(IBackgroundColorSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "offset");
 
 		///<summary>
 		/// Tone #1
@@ -90,7 +90,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Static getter for Tone #1</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTone1(IBackgroundColorSetting that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "tone1");
+		public static string GetTone1(IBackgroundColorSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "tone1");
 
 		///<summary>
 		/// Tone #2
@@ -103,6 +103,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Static getter for Tone #2</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTone2(IBackgroundColorSetting that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "tone2");
+		public static string GetTone2(IBackgroundColorSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "tone2");
 	}
 }

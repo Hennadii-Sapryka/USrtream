@@ -20,29 +20,38 @@
 }
 
 <div>Landing page</div>
-<div>
-    @foreach (var item in homePage)
-    {
-        <a href="@item.Url()">@item.Name</a>
-    }
-</div>
+
 
 @functions {
     string GetSectionTemplate(IPublishedContent section)
     {
         var path = "Landing Page";
-        return $"{path}";
+        var template = section switch
+        {
+            LandingPageTextSection => "LandingPageTextSection",
+            LandingPageImageSection => "LandingPageImageSection",
+            LandingPageColumnsSection => "LandingPageColumnsSection",
+            _ => string.Empty
+        };
+        return $"{template}";
     }
 }
 
 @{
     Layout = "_Layout";
+
     ViewBag.OnHomePage = true;
 
     if (homeContent is null) return;
 
-    var sections = new List<IPublishedContent>();
+    var textSections = homeContent.Children<LandingPageTextSection>().ToList();
+    var imageSections = homeContent.Children<LandingPageImageSection>().ToList();
+    var columnsSections = homeContent.Children<LandingPageColumnsSection>().ToList();
 
+    var sections = new List<IPublishedContent>();
+    sections.AddRange(textSections);
+    sections.AddRange(imageSections);
+    sections.AddRange(columnsSections);
     sections = sections.OrderBy(section => section.SortOrder).ToList();
 }
 

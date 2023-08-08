@@ -1,5 +1,16 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.LandingPageImageSection>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+    Layout = null;
 }
+
+<div class="landing-page-section">
+    @await Html.PartialAsync("_BackgroundColor", Model)
+
+    <div class="image-section-backdrop"></div>
+
+    <div class="content-container">
+        <img class="image-section-image" src="@Model.Image.Url()" alt="@Model.Name" />
+    </div>
+</div>

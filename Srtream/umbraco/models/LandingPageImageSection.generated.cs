@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Landing Page Image Section</summary>
 	[PublishedModel("landingPageImageSection")]
-	public partial class LandingPageImageSection : PublishedContentModel, IBackgroundColorSetting
+	public partial class LandingPageImageSection : PublishedContentModel, IBackgroundColorSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,19 +50,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Image
+		/// Image: Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("content")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Content => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "content");
+		[ImplementPropertyType("image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "image");
 
 		///<summary>
 		/// Offset
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[ImplementPropertyType("offset")]
-		public virtual int Offset => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetOffset(this, _publishedValueFallback);
+		public virtual int Offset => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetOffset(this, _publishedValueFallback);
 
 		///<summary>
 		/// Tone #1
@@ -70,7 +70,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("tone1")]
-		public virtual string Tone1 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetTone1(this, _publishedValueFallback);
+		public virtual string Tone1 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetTone1(this, _publishedValueFallback);
 
 		///<summary>
 		/// Tone #2
@@ -78,6 +78,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("tone2")]
-		public virtual string Tone2 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSetting.GetTone2(this, _publishedValueFallback);
+		public virtual string Tone2 => global::Umbraco.Cms.Web.Common.PublishedModels.BackgroundColorSettings.GetTone2(this, _publishedValueFallback);
 	}
 }
