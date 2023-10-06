@@ -2,12 +2,12 @@
     .container-website-info,
     .container-footer-nav {
         float: none;
+        position: initial;
         width: 100%;
     }
 
     .site-footer {
         width: 100%;
-        height: auto;
         margin-bottom: 0;
         text-align: center;
         background: #04082E;

@@ -1,8 +1,4 @@
-﻿.text-section {
-    font-family: ElevenShares-Bold;
-    padding-top: 30px;
-    padding-bottom: 50px;
-}
+﻿
 
 .text-section-title {
     color: #212121;
@@ -14,7 +10,7 @@
 }
 
     .text-section-content p {
-        font-family: ElevenShares-Alt-Regular;
+        font-family: Alt-Regular;
     }
 
         .text-section-content p + p {
@@ -23,5 +19,5 @@
 
     .text-section-content strong {
         color: #212121;
-        font-family: ElevenShares-Bold;
+        font-family: Bold;
     }

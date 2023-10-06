@@ -1,0 +1,24 @@
+﻿@model IBackgroundColorSettings
+
+@{
+    var tone1 = "transparent";
+    if (!string.IsNullOrWhiteSpace(Model.Tone1)) tone1 = Model.Tone1;
+    var tone1Height = 100;
+    var tone2Height = 0;
+
+    if (Model.Offset > 0)
+    {
+        tone1Height = Model.Offset;
+        tone2Height = 100 - tone1Height;
+    }
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Tone1))
+{
+    <div class="background-tone-1" style="background-color: @(Model.Tone1); height: @(tone1Height)%;"></div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.Tone2))
+{
+    <div class="background-tone-2" style="background-color: @(Model.Tone2); height: @(tone2Height)%; top: @(tone1Height)%"></div>
+}

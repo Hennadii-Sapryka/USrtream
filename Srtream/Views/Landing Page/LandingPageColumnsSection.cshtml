@@ -1,0 +1,36 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.LandingPageColumnsSection>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = null;
+
+    var itemsPerRow = Model.ItemPerRows;
+    var items = Model.Children<LandingPageTextSection>()
+        .OrderBy(item => item.SortOrder)
+        .ToList();
+}
+
+<div class="landing-page-section">
+    @await Html.PartialAsync("Landing Page/_BackgroundColor", Model)
+
+    <div class="content-container">
+        @{
+            while (true)
+            {
+                var rowItems = items.Take(itemsPerRow).ToList();
+                if (!rowItems.Any()) break;
+
+                <div class="columns-section-row flex flex-wrap space-between">
+                    @foreach (var item in rowItems)
+                    {
+                        <div class="columns-section-column">
+                            @await Html.PartialAsync("Landing Page/LandingPageTextSection", item)
+                        </div>
+                    }
+                </div>
+
+                items = items.Skip(itemsPerRow).ToList();
+            }
+        }
+    </div>
+</div>

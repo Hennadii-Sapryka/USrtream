@@ -1,20 +1,5 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.LandingPageTextSection>
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
-
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-    Layout = null;
-
-    var alignTitle = $"align-{Model.AlignTitle}";
-    var alignContent = $"align-{Model.AligntTextContent}";
+	Layout = null;
 }
-<div class="landing-page-section">
-    @await Html.PartialAsync("_BackgroundColor", Model)
-
-    <div class="content-container">
-        <h3 class="text-section-title @alignTitle">@Model.ContentTitle</h3>
-        <div class="text-section-content @alignContent">
-            @Model.TextContent
-        </div>
-    </div>
-</div>

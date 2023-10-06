@@ -1,7 +1,4 @@
-﻿.columns-section {
-}
-
-.columns-section-row {
+﻿.columns-section-row {
     padding: 0 80px;
 }
 
@@ -14,10 +11,11 @@
 
     .columns-section-column .content-container {
         width: 100%;
+        padding: 9px 32px;
     }
 
     .columns-section-column .text-section {
-        font-family: ElevenShares-Bold;
+        font-family: Bold;
         padding: 40px 30px;
     }
 
