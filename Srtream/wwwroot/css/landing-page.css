@@ -90,8 +90,11 @@
 }
 
 .landing-page-section {
-    padding-top: 60px;
-    margin: 0;
+    font-family: Bold;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
 }
 
 .tweet-item {

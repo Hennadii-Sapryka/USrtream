@@ -1,9 +1,9 @@
 ﻿* {
-    font-family: ElevenShares-Regular;
+    font-family: Regular;
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-    font-family: ElevenShares-Bold;
+    font-family: Bold;
 }
 
 form {
@@ -29,7 +29,7 @@ form {
 
 @media(max-width: 1280px) {
     .content-container {
-        width: 100vw;
+        width: 100%;
     }
 }
 
@@ -76,7 +76,7 @@ form {
 }
 
 .space-between {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .full-width {
@@ -102,7 +102,7 @@ select {
 
 .btn {
     font-size: 16px;
-    font-family: ElevenShares-Bold;
+    font-family: Bold;
     border-radius: 6px;
     transition: background .1s ease-in-out;
 }
@@ -123,6 +123,6 @@ select {
 }
 
 .alert > div {
-    font-family: ElevenShares-Alt-SemiBold;
+    font-family: Alt-SemiBold;
     font-size: 15px;
 }

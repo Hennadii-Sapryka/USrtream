@@ -1,39 +1,39 @@
 ﻿@font-face {
-    font-family: ElevenShares-Light;
+    font-family: LivingStream-Light;
     src: url(/fonts/Montserrat-Light.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Regular;
+    font-family: LivingStream-Regular;
     src: url(/fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     src: url(/fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     src: url(/fonts/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Alt-Light;
+    font-family: LivingStream-Alt-Light;
     src: url(/fonts/Inter-Light.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Alt-Regular;
-    src: url(/fonts/Inter-Regular.ttf);
+    font-family: LivingStream-Alt-Regular;
+    src: url(/fonts/Nunito-Regular.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Alt-Bold;
+    font-family: LivingStream-Alt-Bold;
     src: url(/fonts/Inter-Bold.ttf);
 }
 
 @font-face {
-    font-family: ElevenShares-Alt-SemiBold;
-    src: url(/fonts/Inter-SemiBold.ttf);
+    font-family: LivingStream-Alt-SemiBold;
+    src: url(/fonts/PoiretOne-Regular.ttf);
 }

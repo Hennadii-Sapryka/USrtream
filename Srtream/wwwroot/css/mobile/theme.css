@@ -18,7 +18,13 @@
 }
 
 @media(max-width:768px) {
-    body.lock {overflow: hidden;}
+    body.lock {overflow: hidden;
+    }
+
+    .main-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
     .user-section .form {
         margin-top: 10px;
