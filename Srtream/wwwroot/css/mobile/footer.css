@@ -83,7 +83,7 @@
     }
 
     .footer-menu--item {
-        font-family: ElevenShares-Regular;
+        font-family: LivingStream-Regular;
         color: rgba(255, 255, 255, 0.6);
         margin-bottom: 24px;
     }
@@ -91,7 +91,7 @@
     .footer-menu .footer-menu--section {
         margin-top: 21px;
         margin-bottom: 51px;
-        font-family: ElevenShares-Bold;
+        font-family: LivingStream-Bold;
         color: #FFFFFF;
     }
 }

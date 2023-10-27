@@ -80,5 +80,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("backgroundImage")]
 		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue BackgroundImage => global::Umbraco.Cms.Web.Common.PublishedModels.LandingPageHeaderSettings.GetBackgroundImage(this, _publishedValueFallback);
+
+		///<summary>
+		/// backgroundVideo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("backgroundVideo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops BackgroundVideo => global::Umbraco.Cms.Web.Common.PublishedModels.LandingPageHeaderSettings.GetBackgroundVideo(this, _publishedValueFallback);
 	}
 }

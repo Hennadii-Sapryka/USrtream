@@ -26,6 +26,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue BackgroundImage { get; }
+
+		/// <summary>backgroundVideo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Models.MediaWithCrops BackgroundVideo { get; }
 	}
 
 	/// <summary>Landing Page Header Settings</summary>
@@ -71,5 +76,18 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue GetBackgroundImage(ILandingPageHeaderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue>(publishedValueFallback, "backgroundImage");
+
+		///<summary>
+		/// backgroundVideo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("backgroundVideo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops BackgroundVideo => GetBackgroundVideo(this, _publishedValueFallback);
+
+		/// <summary>Static getter for backgroundVideo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetBackgroundVideo(ILandingPageHeaderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "backgroundVideo");
 	}
 }

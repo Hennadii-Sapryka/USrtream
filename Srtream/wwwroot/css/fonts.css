@@ -1,26 +1,26 @@
 ﻿@font-face {
     font-family: LivingStream-Light;
-    src: url(/fonts/Montserrat-Light.ttf);
+    src: url(/fonts/Nunito-Light.ttf);
 }
 
 @font-face {
     font-family: LivingStream-Regular;
-    src: url(/fonts/Montserrat-Regular.ttf);
+    src: url(/fonts/Nunito-Regular.ttf);
 }
 
 @font-face {
     font-family: LivingStream-Bold;
-    src: url(/fonts/Montserrat-Bold.ttf);
+    src: url(/fonts/Nunito-Bold.ttf);
 }
 
 @font-face {
     font-family: LivingStream-SemiBold;
-    src: url(/fonts/Montserrat-SemiBold.ttf);
+    src: url(/fonts/Nunito-SemiBold.ttf);
 }
 
 @font-face {
     font-family: LivingStream-Alt-Light;
-    src: url(/fonts/Inter-Light.ttf);
+    src: url(/fonts/Nunito-Light.ttf);
 }
 
 @font-face {
@@ -30,7 +30,7 @@
 
 @font-face {
     font-family: LivingStream-Alt-Bold;
-    src: url(/fonts/Inter-Bold.ttf);
+    src: url(/fonts/Nunito-Bold.ttf);
 }
 
 @font-face {

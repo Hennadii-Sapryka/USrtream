@@ -1,9 +1,9 @@
 ﻿* {
-    font-family: Regular;
+    font-family: LivingStream-Regular;
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-    font-family: Bold;
+    font-family: LivingStream-Bold;
 }
 
 form {
@@ -31,6 +31,10 @@ form {
     .content-container {
         width: 100%;
     }
+}
+
+.fit-picture {
+    width: 300px;
 }
 
 .main-section {

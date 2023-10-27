@@ -5,9 +5,13 @@
 
     .logo-container {
         position: absolute;
-        top: 24px;
+        top: 6px;
         left: 16px;
         z-index: 3;
+    }
+
+    .fit-picture {
+        width: 65px;
     }
 
     div.content-container.header-container.clearfix {
@@ -136,7 +140,7 @@
         text-decoration: none;
         color: #FFF06D;
         background: transparent;
-        font-family: ElevenShares-Regular;
+        font-family: LivingStream-Regular;
     }
 
     .nav-item,
@@ -151,7 +155,7 @@
         }
 
     .nav-item-current {
-        font-family: ElevenShares-Bold;
+        font-family: LivingStream-Bold;
     }
 
     .nav-section {
@@ -163,7 +167,7 @@
 
     .nav-section-name {
         color: white;
-        font-family: ElevenShares-Bold;
+        font-family: LivingStream-Bold;
     }
 
     .nav-section:hover > .nav-section-items {

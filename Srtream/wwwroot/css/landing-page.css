@@ -18,6 +18,10 @@
     width: 50%;
 }
 
+.fit-picture {
+    width: 700px;
+}
+
 .home-cta-title {
     color: white;
     font-size: 40px;

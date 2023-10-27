@@ -26,7 +26,7 @@
 }
 
 .logo-title {
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 20px;
     border-bottom-style: solid;
     border-width: thin;
@@ -53,7 +53,7 @@
     line-height: 30px;
     text-decoration: none;
     color: white;
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
 }
 
 .nav-item,
@@ -68,7 +68,7 @@
     }
 
 .nav-item-current {
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
 }
 
 .nav-section {
