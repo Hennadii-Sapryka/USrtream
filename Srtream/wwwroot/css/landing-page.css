@@ -1,5 +1,6 @@
 ﻿.site-header {
-    height: 600px;
+    height: 100%;
+    max-height: 400px;
 }
 
 .site-content {
@@ -19,7 +20,8 @@
 }
 
 .fit-picture {
-    width: 700px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .home-cta-title {
@@ -94,6 +96,7 @@
 }
 
 .landing-page-section {
+    width: 100%;
     font-family: Bold;
     padding-top: 30px;
     padding-bottom: 50px;

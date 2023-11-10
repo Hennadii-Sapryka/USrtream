@@ -33,6 +33,11 @@ form {
     }
 }
 
+.video {
+    width: 100%;
+
+}
+
 .fit-picture {
     width: 300px;
 }

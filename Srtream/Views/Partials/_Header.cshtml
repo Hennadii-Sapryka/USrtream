@@ -19,36 +19,34 @@
     @if (home is not null && (home.BackgroundImage?.HasImage() ?? false))
     {
         var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Image");
-        var backgroundImageUrl1 = home.BackgroundImage;
-        var backgroundVideo = home.BackgroundVideo;
         var backgroundVideoUrl = Url.GetCropUrl(home.BackgroundVideo, "Video");
-
 
         <style>
             .nav-background {
-                background-image: url("@backgroundImageUrl");
+                background-image: url("@backgroundVideoUrl");
             }
         </style>
-        <div class="nav-background"></div>
+        <div class="nav-background">
+            <video class="video"
+                   autoplay muted loop>
+                <source src="@Url.GetCropUrl(home.BackgroundVideo, "Video")"/>
+            </video>
+        </div>
     }
 
-
     <div class="content-container header-container clearfix">
+        @await Html.PartialAsync("_Navigation", Model)
         <a href="@home.Url()">
             <div class="logo-container">
                 <img class="fit-picture"
                      src="/media/o4zpz0wy/logo-living-streampng.png"
                 alt="Logo Living Stream" />
-                <video id="home_video"
-                    autoplay muted loop >
-                    <source src="/media/o4zpz0wy/flower.webm"
-                            type="video/webm" />
-                </video>
+               
                @* <div class="logo-title">Living Stream</div>*@
                 <div class="logo-site">www.lvivchurch.com</div>
             </div>
         </a>
 
-        @await Html.PartialAsync("_Navigation", Model)
+       
     </div>
 </div>

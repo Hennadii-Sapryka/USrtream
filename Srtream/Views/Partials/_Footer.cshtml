@@ -17,17 +17,20 @@
                 <div class="footer-logo-title">Living Stream</div>
                 <div class="footer-logo-site">www.living-stream.com</div>
             </div>
-        <div class="social-media-container">
-            @await Html.PartialAsync("_NavigationLinks")
-            @foreach (var socialLink in socialLinks)
-            {
-                var image = socialLink.Value<IPublishedContent>("icon");
+        @await Html.PartialAsync("_NavigationLinks")
+        @foreach (var socialLink in socialLinks)
+        {
+            var image = socialLink.Value<IPublishedContent>("icon");
 
-                <a class="social-link" href="@socialLink.Url">
-                    <img src="@(image.Url())" height=@(iconSize) width=@(iconSize) alt="@socialLink.SocialName" class="social-icon" />
-                    <span class="social-text">@socialLink.SocialName</span>
-                </a>
-            }
+            <a class="social-link" href="@socialLink.Url">
+                <img src="@(image.Url())" height=@(iconSize) width=@(iconSize) alt="@socialLink.SocialName" class="social-icon" />
+                <span class="social-text">@socialLink.SocialName</span>
+            </a>
+        }
+        <div class="social-media-container">
+
+
+            
         </div>
         <div class="site-copyright">&copy; Copyright - @Model.Copyrights @DateTime.UtcNow.Year</div>
     </div>
