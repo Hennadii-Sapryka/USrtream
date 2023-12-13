@@ -23,6 +23,8 @@
     float: left;
     display: inline-block;
     text-align: center;
+    top: 10px;
+    position: absolute;
 }
 
 .logo-title {
@@ -36,8 +38,9 @@
 }
 
 .logo-site {
-    font-size: 8px;
+    font-size: 20px;
     letter-spacing: 2.6px;
+    font-family: LivingStream-SemiBold;
 }
 
 .nav-menu {
