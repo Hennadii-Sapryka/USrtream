@@ -10,7 +10,8 @@
 }
 
 .site-footer {
-    background: linear-gradient(60deg, rgba(4, 8, 46, 0.95) 40%, rgba(26, 35, 126, 0.87) );
+    /*background: linear-gradient(60deg, rgba(4, 8, 46, 0.95) 40%, rgba(26, 35, 126, 0.87) );*/
+    background: linear-gradient(60deg,rgb(46 83 134) 40%, rgb(97 166 231) );
     height: auto;
     padding: 40px 0;
 }
