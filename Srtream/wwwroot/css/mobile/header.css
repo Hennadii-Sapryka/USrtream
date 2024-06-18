@@ -5,7 +5,7 @@
 
     .logo-container {
         position: absolute;
-        top: 6px;
+        top: 16px;
         left: 16px;
         z-index: 3;
     }
@@ -15,7 +15,7 @@
     }
 
     div.content-container.header-container.clearfix {
-        background-color: #04082E;
+        background-color: #2e5387;
         z-index: 4;
         position: fixed;
     }
@@ -36,6 +36,18 @@
         border-color: #FFEB3B;
         width: 101px;
         text-align: center;
+    }
+
+    div.title-container {
+        gap: 10px;
+        top: 27px;
+        display: flex;
+        color: aliceblue;
+        left: 90px;
+        position: absolute;
+    }
+    .title{
+        font-size:15px;
     }
 
     .head__burger {
@@ -125,7 +137,7 @@
             max-height: 100vh;
             padding: 70px 0;
             overflow: auto;
-            background-color: #04082E;
+            background-color: #2e5387;
             z-index: 2;
         }
 

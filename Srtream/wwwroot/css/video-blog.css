@@ -41,7 +41,7 @@
 
 .video-blog-item .title {
     margin-top: 12px;
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.02em;
@@ -90,6 +90,8 @@
 }
 
 .video-blog-close {
+    height: 30px;
+    width: 30px;
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -129,7 +131,6 @@
     background: #EFF4F9;
     border: 1px solid #E5EDF4;
     border-radius: 4px;
-    margin-top: 30px;
     overflow: auto;
 }
 
@@ -195,7 +196,7 @@
     }
 
         .suggestions-content .video-blog-suggestion .detail .title {
-            font-family: ElevenShares-SemiBold;
+            font-family: LivingStream-SemiBold;
             font-size: 14px;
             line-height: 20px;
             letter-spacing: -0.02em;
@@ -204,13 +205,37 @@
         }
 
         .suggestions-content .video-blog-suggestion .detail .date {
-            font-family: ElevenShares-SemiBold;
+            font-family: ELivingStream-SemiBold;
             font-size: 12px;
             line-height: 15px;
             letter-spacing: -0.02em;
             color: rgba(33, 33, 33, 0.6);
         }
 
+.close {
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+    .close:hover {
+        opacity: 1;
+    }
+
+    .close:before, .close:after {
+
+        background-color: #333;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        transform: rotate(-45deg);
+    }
 @media(max-width:768px) {
     .video-blog-modal {
         padding-top: 80px;
@@ -259,9 +284,10 @@
         width: 100%;
     }
 
-    .video-blog-close, 
+    .video-blog-close,
     .blog-detail-container .title {
         line-height: 40px;
+        width: 20px;
     }
 
     .suggestions-header {

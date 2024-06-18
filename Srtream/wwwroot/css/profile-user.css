@@ -7,9 +7,9 @@
 
 .profile-account-container {
     width: 368px;
-    height: 277;
+    height: 277px;
     padding: 24px;
-    margin-right: 20;
+    margin-right: 20px;
  
     border-radius: 5px;
     background: white;
@@ -40,7 +40,7 @@
 }
 
 .profile-description {
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 13px;
     margin-top: 8px;
     margin-bottom: 30px;
@@ -61,7 +61,7 @@
 
 .btn {
     font-size: 16px;
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     border-radius: 6px;
     transition: background .1s ease-in-out;
 }
@@ -76,7 +76,7 @@
     border: 1px solid #CBD5E1;
     border-radius: 6px;
     padding: 0 18px;
-    font-family: ElevenShares-Alt-Regular;
+    font-family: LivingStream-Alt-Regular;
     font-size: 14px;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .profile-button-name {
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 14px;
     color: #283593;
     text-decoration: none;
@@ -103,8 +103,8 @@
 
 .modal-container {
     background-color: rgba(0,0,0, 0.3);
-    height: 300;
-    width: 300;
+    height: 300px;
+    width: 300px;
     display: flex;
     position: fixed;
     align-items: center;
@@ -120,5 +120,5 @@
 
 .modal {
     background-color: white;
-    width: 600;
+    width: 600px;
 }

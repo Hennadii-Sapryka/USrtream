@@ -12,8 +12,12 @@ using Umbraco.Cms.Core.Configuration.Models;
 using Umbraco.Cms.Core.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Extensions;
+using Stream.Extensions;
+using Umbraco.Cms.Core.Services;
+using Umbraco.Cms.Core.IO;
+using Srtream.Umbraco.Core;
 
-namespace Srtream
+namespace Stream
 {
     public class Startup
     {
@@ -46,6 +50,7 @@ namespace Srtream
         {
             services.AddTransient<IUmbracoPageManager, UmbracoPageManager>();
             services.AddTransient<INavigationMenuService, NavigationMenuService>();
+            services.AddUnique<IMediaPathScheme, UniqueMediaPathScheme>();
 
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()

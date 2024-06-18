@@ -31,6 +31,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		global::Umbraco.Cms.Core.Models.MediaWithCrops BackgroundVideo { get; }
+
+		/// <summary>Logo Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Models.MediaWithCrops LogoImage { get; }
 	}
 
 	/// <summary>Landing Page Header Settings</summary>
@@ -89,5 +94,18 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetBackgroundVideo(ILandingPageHeaderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "backgroundVideo");
+
+		///<summary>
+		/// Logo Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("logoImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LogoImage => GetLogoImage(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Logo Image</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.5.1+406576ddfa7f3577d959a32ec2296bd9f730786e")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetLogoImage(ILandingPageHeaderSettings that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "logoImage");
 	}
 }

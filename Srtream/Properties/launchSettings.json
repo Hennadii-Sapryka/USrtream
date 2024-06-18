@@ -1,20 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": true,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "https://localhost:44355",
-      "sslPort": 44353
-    }
-  },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "use64Bit": true
     },
     "Umbraco.Web.UI": {
       "commandName": "Project",
@@ -34,6 +26,15 @@
         "ASPNETCORE_URLS": "https://localhost:44353;http://localhost:57007"
       },
       "distributionName": ""
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": true,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "https://localhost:44355",
+      "sslPort": 44353
     }
   }
 }

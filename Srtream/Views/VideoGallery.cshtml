@@ -1,6 +1,12 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.VideoGallery>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @using System.Web
+@using Stream.Extensions;
+@using Stream.UmbracoServices;
+@using Umbraco.Cms.Core.Services;
+
+@inject IMediaService MediaService;
+
 @{
     Layout = "_Layout.cshtml";
     var mappedVideoBlogEntries = Model.Children<VideoGalleryEntry>().Select(x => new
@@ -12,6 +18,10 @@
         embeddedVideo = HttpUtility.HtmlDecode(x.EmbeddedVideo.ToString()),
         createdDate = x.CreateDate
     }).ToList();
+
+    var mediaList = Umbraco.MediaAtRoot().Where(x => x.Name == "close").FirstOrDefault().MediaUrl();
+    var media = Umbraco.Media(1225).Url();
+    
 }
 
 <div class="content-container video-gallery-page" id="video-gallery">

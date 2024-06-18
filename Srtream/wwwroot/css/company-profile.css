@@ -18,7 +18,7 @@
     }
 
 .company-name {
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     font-size: 25px;
     line-height: 30px;
     color: #212121;
@@ -32,7 +32,7 @@
     color: white;
     padding: 0 8px;
     margin-left: 10px;
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 13px;
 }
 
@@ -42,22 +42,22 @@
 }
 
     .company-info-section p {
-        font-family: ElevenShares-SemiBold;
+        font-family: LivingStream-SemiBold;
     }
 
-    .company-info-tags span {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0 12px;
-        height: 24px;
-        line-height: 24px;
-        font-size: 13px;
-        background: #E2E8F0;
-        border-radius: 4px;
-        color: #607D8B;
-        font-family: ElevenShares-SemiBold;
-    }
+.company-info-tags span {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    background: #E2E8F0;
+    border-radius: 4px;
+    color: #607D8B;
+    font-family: LivingStream-SemiBold;
+}
 
 .company-info-tags {
     gap: 10px;
@@ -72,7 +72,7 @@
     .company-basic-detail > p a {
         font-size: 13px;
         color: #607D8B;
-        font-family: ElevenShares-SemiBold;
+        font-family: LivingStream-SemiBold;
     }
 
 .company-profile-header {

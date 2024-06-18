@@ -41,7 +41,7 @@
     border-radius: 12px;
     background-color: rgba(40, 53, 147, 0.5);
     color: white;
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 11px;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .blog-post-card-title {
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     line-height: 24px;
     color: #212121;
     margin-top: 14px;
@@ -69,7 +69,7 @@
 }
 
 .blog-post-title {
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     font-size: 32px;
     margin: 15px 0;
 }
@@ -85,7 +85,7 @@
 
 .linked-ticker {
     color: #005DE7;
-    font-family: ElevenShares-SemiBold;
+    font-family: LivingStream-SemiBold;
     font-size: 16px;
     margin-right: 10px;
 }
@@ -93,7 +93,7 @@
     .linked-ticker:hover {
         color: #003BC5;
         cursor: pointer;
-        font-family: ElevenShares-Bold;
+        font-family: LivingStream-Bold;
     }
 
 .blog-content {
@@ -102,7 +102,7 @@
 }
 
 .blog-post-suggestions-title {
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     font-size: 24px;
     margin-bottom: 35px;
 }

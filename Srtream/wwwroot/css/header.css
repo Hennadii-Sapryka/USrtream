@@ -1,7 +1,8 @@
 ﻿.site-header {
     height: 86px;
     position: relative;
-    background: linear-gradient(68.35deg, rgba(4, 8, 46, 0.95) 40.69%, rgba(26, 35, 126, 0.87) 71.7%);
+    /*background: linear-gradient(68.35deg, rgba(4, 8, 46, 0.95) 40.69%, rgba(26, 35, 126, 0.87) 71.7%);*/
+    background: linear-gradient(68.35deg, rgba(46, 83, 134, 0.95) 40.69%, rgba(82, 142, 203,0.87) 71.7%);
 }
 
 .nav-background {
@@ -18,13 +19,16 @@
     padding: 22px 0;
 }
 
+.fit-picture {
+    content: url(/);
+}
+
 .logo-container {
     color: white !important;
     float: left;
-    display: inline-block;
-    text-align: center;
-    top: 10px;
-    position: absolute;
+    display: flex;
+ 
+
 }
 
 .logo-title {
@@ -35,6 +39,16 @@
     border-top-style: solid;
     border-color: #FFEB3B;
     width: 160px;
+}
+
+.title-container {
+    top:70px;
+    color: aliceblue;
+    FONT-WEIGHT: 600;
+}
+
+.title {
+    font-size: 20px;
 }
 
 .logo-site {
@@ -50,6 +64,11 @@
     padding-right: 20px;
 }
 
+.content-container header-container clearfix, a {
+    gap: 20px;
+    display: flex;
+    color: #0d6efd00;
+}
 .nav-item, .nav-section-name {
     position: relative;
     display: inline-block;

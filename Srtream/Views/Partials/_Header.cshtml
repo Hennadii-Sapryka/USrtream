@@ -1,6 +1,7 @@
 ﻿@model IPublishedContent
 @using Stream.UmbracoServices.Interfaces
 @using Microsoft.AspNetCore.Mvc
+@using Umbraco.Cms.Core.IO;
 @using Umbraco.Cms.Core.Media
 @using Umbraco.Cms.Core.Services
 @using Umbraco.Extensions
@@ -9,6 +10,7 @@
 @inject IImageUrlGenerator UrlGenerator
 @inject IMediaService MediaService
 @inject IUmbracoPageManager PageManager
+@inject IMediaPathScheme MediaPath
 
 @{
     var onHomePage = (bool)(ViewBag.OnHomePage ?? false);
@@ -18,8 +20,11 @@
 <div class="site-header">
     @if (home is not null && (home.BackgroundImage?.HasImage() ?? false))
     {
+
         var backgroundImageUrl = Url.GetCropUrl(home.BackgroundImage, "Image");
         var backgroundVideoUrl = Url.GetCropUrl(home.BackgroundVideo, "Video");
+        var logoImage = Url.GetCropUrl(home.LogoImage, "Image");
+        //var t = MediaPath.GetFilePath(home);
 
         if (onHomePage)
         {
@@ -27,7 +32,13 @@
                 .nav-background {
                     background-image: url("@backgroundVideoUrl");
                 }
+
+                .fit-picture {
+                    content: url(@logoImage);
+                }
             </style>
+
+
             <div class="nav-background">
                 <video class="video"
                        autoplay muted loop>
@@ -38,24 +49,32 @@
         else
         {
             <style>
-                .fit-picture {width: 60px;}
+                .fit-picture {
+                    width: 60px;
+                }
+
+                .logo-site {
+                    font-size: 10px;
+                }
             </style>
         }
     }
 
     <div class="content-container header-container clearfix">
+       
         @await Html.PartialAsync("_Navigation", Model)
         <a href="@home.Url()">
+
             <div class="logo-container">
                 <img class="fit-picture"
-                     src="/media/l0hi2juy/logonew.png"
-                alt="Logo Living Stream" />
-               
-               @* <div class="logo-title">Living Stream</div>*@
-                <div class="logo-site">www.lvivchurch.com</div>
+                     alt="Logo Living Stream" />
+                <div class="logo-site"></div>
+            </div>
+            <div class="title-container">
+                <h4>Українська</h4>
+                <h4>Євангелька</h4>
+                <h4>Церква</h4>
             </div>
         </a>
-
-       
     </div>
 </div>
