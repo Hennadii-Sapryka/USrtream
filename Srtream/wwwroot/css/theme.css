@@ -16,6 +16,10 @@ form {
     clear: both;
 }
 
+.fit-picture {
+    max-width: 100px;
+}
+
 .site-content {
     min-height: calc(100vh - 110px - 150px);
 }
@@ -35,11 +39,6 @@ form {
 
 .video {
     width: 100%;
-
-}
-
-.fit-picture {
-    width: 100px;
 }
 
 .main-section {

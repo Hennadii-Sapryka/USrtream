@@ -11,7 +11,7 @@
     }
 
     .fit-picture {
-        width: 65px;
+        width: 40px;
     }
 
     div.content-container.header-container.clearfix {
@@ -38,14 +38,15 @@
         text-align: center;
     }
 
-    div.title-container {
-        gap: 10px;
-        top: 27px;
+    .title-container {
+        gap: 5px;
+        top: 30px;
         display: flex;
         color: aliceblue;
-        left: 90px;
+        left: 65px;
         position: absolute;
     }
+
     .title{
         font-size:15px;
     }

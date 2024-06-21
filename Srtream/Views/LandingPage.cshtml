@@ -46,7 +46,7 @@
     sections.AddRange(textSections);
     sections.AddRange(imageSections);
     sections.AddRange(columnsSections);
-    sections = sections.OrderBy(section => section.SortOrder).ToList();
+    sections = sections.OrderByDescending(section => section.SortOrder).ToList();
 }
 
 @foreach (var section in sections)

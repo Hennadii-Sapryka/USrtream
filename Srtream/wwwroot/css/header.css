@@ -21,14 +21,13 @@
 
 .fit-picture {
     content: url(/);
+    margin-right:20px;
 }
 
 .logo-container {
     color: white !important;
     float: left;
     display: flex;
- 
-
 }
 
 .logo-title {
@@ -42,9 +41,9 @@
 }
 
 .title-container {
-    top:70px;
+    top: 70px;
     color: aliceblue;
-    FONT-WEIGHT: 600;
+    display:flow-root;
 }
 
 .title {
@@ -65,8 +64,6 @@
 }
 
 .content-container header-container clearfix, a {
-    gap: 20px;
-    display: flex;
     color: #0d6efd00;
 }
 .nav-item, .nav-section-name {
@@ -127,7 +124,7 @@
 
     .nav-section-items .nav-item {
         transition: all 100ms ease-in-out;
-        background: #120C56;
+        background: #386ab1;
         color: white;
         margin: 0;
         padding: 0 16px;

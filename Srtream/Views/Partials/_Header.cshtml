@@ -38,7 +38,6 @@
                 }
             </style>
 
-
             <div class="nav-background">
                 <video class="video"
                        autoplay muted loop>
@@ -50,31 +49,32 @@
         {
             <style>
                 .fit-picture {
-                    width: 60px;
+                    content: url(@logoImage);
+                    max-width:60px;
                 }
 
-                .logo-site {
-                    font-size: 10px;
+                .title-container, h4 {
+                    font-size: 16px;
+                    margin-bottom: 0px;
                 }
             </style>
         }
     }
 
     <div class="content-container header-container clearfix">
-       
+
         @await Html.PartialAsync("_Navigation", Model)
         <a href="@home.Url()">
-
             <div class="logo-container">
                 <img class="fit-picture"
                      alt="Logo Living Stream" />
                 <div class="logo-site"></div>
             </div>
-            <div class="title-container">
-                <h4>Українська</h4>
-                <h4>Євангелька</h4>
-                <h4>Церква</h4>
-            </div>
         </a>
+        <div class="title-container">
+            <h4>Українська</h4>
+            <h4>Євангелька</h4>
+            <h4>Церква</h4>
+        </div>
     </div>
 </div>

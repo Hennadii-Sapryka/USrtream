@@ -1,10 +1,10 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.AboutUs>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.WebPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "_Layout";
 
-	var model = Model.AncestorOrSelf<AboutUs>();
+	var model = Model.AncestorOrSelf<WebPage>();
     var contentTitle = model.Value<string>("contentTitle");
 
 }
