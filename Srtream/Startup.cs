@@ -51,7 +51,16 @@ namespace Stream
             services.AddTransient<IUmbracoPageManager, UmbracoPageManager>();
             services.AddTransient<INavigationMenuService, NavigationMenuService>();
             services.AddUnique<IMediaPathScheme, UniqueMediaPathScheme>();
+            services.AddCors(options =>
+            {
+                //options.AddPolicy("AllowDashboardOrigin",
+                //    builder => builder.SetIsOriginAllowed((host) => true).WithOrigins("http://*:*", "https://*:*", "http://localhost:8080", "http://sebapi.redspace.eu", "https://sebapi.azurewebsites.net").AllowAnyMethod().AllowAnyHeader());
 
+
+                options.AddPolicy("AllowDashboardOrigin",
+                             builder => builder.SetIsOriginAllowed((host) => true).AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            });
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
@@ -78,10 +87,11 @@ namespace Stream
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowDashboardOrigin");
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {
+
                     u.UseBackOffice();
                     u.UseWebsite();
                 })

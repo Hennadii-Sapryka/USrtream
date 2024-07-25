@@ -6,7 +6,8 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "use64Bit": true
+      "use64Bit": true,
+      "ancmHostingModel": "OutOfProcess"
     },
     "Umbraco.Web.UI": {
       "commandName": "Project",
@@ -30,11 +31,11 @@
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": true,
+    "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:44355",
-      "sslPort": 44353
+      "applicationUrl": "http://localhost:49901",
+      "sslPort": 44394
     }
   }
 }
