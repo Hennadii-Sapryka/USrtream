@@ -1,0 +1,14 @@
+﻿.image-container{
+    text-align:center;
+}
+
+.image-section-image {
+    border-radius: 8px;
+    width: 50%;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.text-section-content {
+    text-align: justify;
+}

@@ -2,16 +2,32 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.WebPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = "_Layout";
+    Layout = "_Layout";
 
-	var model = Model.AncestorOrSelf<WebPage>();
+    var model = Model.AncestorOrSelf<WebPage>();
     var contentTitle = model.Value<string>("contentTitle");
-
+    var image = model.ImageContent is null ? " " : model.ImageContent.LocalCrops.Src;
+    var align = model.AlignTitle;
 }
+
+@section Head {
+    <link rel="stylesheet" href="@Url.Content("~/css/sunday-school.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/mobile/landing-page/theme.css")" />
+}
+
+<style>
+    .text-section-content{
+        text-align: @align;
+    }
+
+</style>
 
 <div class="content-container">
     <h1 class="main-page-title">@contentTitle</h1>
-    <div class="t">
+    <div class="image-container">
+        <img class="image-section-image" src="@image" />
+    </div>
+    <div class="text-section-content">
         @Model.TextContent
     </div>
 </div>
