@@ -34,7 +34,7 @@
 
 .btn-cta {
     font-size: 16px;
-    font-family: ElevenShares-Bold;
+    font-family: LivingStream-Bold;
     background: #FFEB3B;
     padding: 18px 32px;
     border-radius: 6px;
@@ -62,7 +62,7 @@
     }
 
     .feature-card > span {
-        font-family: ElevenShares-SemiBold;
+        font-family: Raleway;
     }
 
     .feature-card:hover {
@@ -94,8 +94,7 @@
 .landing-page-section {
     width: 100%;
     font-family: Bold;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding: 10px 20px 20px;
     position: relative;
     overflow: hidden;
 }

@@ -4,7 +4,6 @@
 
 .container-footer-nav {
     float: right;
-    position:absolute;
     top:0px;
     right:0px;
 }
@@ -14,11 +13,14 @@
     background: linear-gradient(60deg,rgb(46 83 134) 40%, rgb(97 166 231) );
     height: auto;
     padding: 40px 0;
+    display: flex;
 }
 
 .social-media-container {
-    text-align: left;
-    padding: 30px 0;
+   /* text-align: left;*/
+   /* display: grid;*/
+    /*justify-content: center;*/
+    text-align: center;
 }
 
 .social-link {
@@ -26,7 +28,7 @@
     color: white !important;
     line-height: 22px;
     text-decoration: none;
-    margin: 0px 18px 0 0;
+    margin: 10px 0 0 0;
 }
 
     .social-link:hover > .social-text {
@@ -58,11 +60,12 @@
     border-color: #FFEB3B;
     width: 160px;
     text-align: center;
+    color: white;
 }
 
 .footer-logo-container {
     width: 160px;
-    color: white;
+
 }
 
 .footer-logo-site {
@@ -106,7 +109,7 @@
     }
 
 .site-copyright {
+    margin-top:10px;
     color: rgba(255, 255, 255, 0.6);
-    text-align: left;
     font-size: 13px;
 }

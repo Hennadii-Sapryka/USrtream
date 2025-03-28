@@ -13,25 +13,23 @@
 
 <div class="site-footer">
     <div class="content-container">
-            <div class="footer-logo-container">
-                <div class="footer-logo-title">ЖИВИЙ ПОТІК</div>
-                <div class="footer-logo-site">www.living-stream.com</div>
-            </div>
+        <div class="footer-logo-container">
+            <div class="footer-logo-title">ЖИВИЙ ПОТІК</div>
+        </div>
         @await Html.PartialAsync("_NavigationLinks")
-        @foreach (var socialLink in socialLinks)
-        {
-            var image = socialLink.Value<IPublishedContent>("icon");
 
-            <a class="social-link" href="@socialLink.Url">
-                <img src="@(image.Url())" height=@(iconSize) width=@(iconSize) alt="@socialLink.SocialName" class="social-icon" />
-                <span class="social-text">@socialLink.SocialName</span>
-            </a>
-        }
         <div class="social-media-container">
 
+            @foreach (var socialLink in socialLinks)
+            {
+                var image = socialLink.Value<IPublishedContent>("icon");
 
-            
+                <a class="social-link" href="@socialLink.Url">
+                    <img src="@(image.Url())" height=@(iconSize) width=@(iconSize) alt="@socialLink.SocialName" class="social-icon" />
+                    <span class="social-text">@socialLink.SocialName</span>
+                </a>
+            }
+            <div class="site-copyright">&copy; ЖИВИЙ ПОТІК - @Model.Copyrights @DateTime.UtcNow.Year</div>
         </div>
-        <div class="site-copyright">&copy; Copyright - @Model.Copyrights @DateTime.UtcNow.Year</div>
     </div>
 </div>

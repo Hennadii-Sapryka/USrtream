@@ -14,10 +14,11 @@
     <!-- Force Windows to use ICU. Otherwise Windows 10 2019H1+ will do it, but older Windows 10 and most, if not all, Windows Server editions will run NLS -->
     <ItemGroup>
       <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
-      <PackageReference Include="Umbraco.Cms" Version="9.5.4" />
-      <PackageReference Include="Umbraco.Cms.Infrastructure" Version="9.5.4" />
-      <PackageReference Include="Umbraco.Cms.SqlCe" Version="9.5.4" />
-      <PackageReference Include="uSync" Version="9.4.0" />
+      <PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.2-pre20220913165057" />
+      <PackageReference Include="Umbraco.Cms" Version="10.8.9" />
+      <PackageReference Include="Umbraco.Cms.Infrastructure" Version="10.8.9" />
+      <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="10.8.9" />
+      <PackageReference Include="uSync" Version="10.7.3" />
       <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) Or $(RuntimeIdentifier.StartsWith('win')) Or ('$(RuntimeIdentifier)' == '' And !$([MSBuild]::IsOSPlatform('osx')))" />
     </ItemGroup>
     <ItemGroup>

@@ -7,17 +7,21 @@
         position: absolute;
         top: 16px;
         left: 16px;
-        z-index: 3;
+        z-index: 1;
     }
 
     .fit-picture {
         width: 40px;
     }
 
+    .header-container {
+        padding: 22px 0;
+    }
+
     div.content-container.header-container.clearfix {
-        background-color: #2e5387;
-        z-index: 4;
-        position: fixed;
+        /*background-color: #2e5387;*/
+        z-index: 1;
+        /*position: fixed;*/
     }
 
     div.logo-site {
@@ -39,12 +43,13 @@
     }
 
     .title-container {
+        align-items: center;
         gap: 5px;
-        top: 30px;
+        top: 10px;
         display: flex;
         color: aliceblue;
         left: 65px;
-        position: absolute;
+
     }
 
     .title{

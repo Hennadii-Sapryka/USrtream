@@ -33,6 +33,7 @@
 }
 
 .video-blog-item .play-circle {
+    max-width: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -205,7 +206,7 @@
         }
 
         .suggestions-content .video-blog-suggestion .detail .date {
-            font-family: ELivingStream-SemiBold;
+            font-family: LivingStream-SemiBold;
             font-size: 12px;
             line-height: 15px;
             letter-spacing: -0.02em;

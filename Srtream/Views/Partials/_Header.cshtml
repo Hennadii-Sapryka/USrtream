@@ -44,18 +44,49 @@
                     <source src="@Url.GetCropUrl(home.BackgroundVideo, "Video")" />
                 </video>
             </div>
+            <!--Hey! This is the original version
+            of Simple CSS Waves-->
+            <div class="header">
+
+                <div class="inner-header flex-wave">
+                    <!--Just the logo.. Don't mind this-->
+
+                    <h1>ЖИВИЙ ПОТІК</h1>
+                </div>
+                <!--Waves Container-->
+                <div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                        </g>
+                    </svg>
+                </div>
+                <!--Waves end-->
+            </div>
+            <!--Header ends-->
         }
         else
         {
             <style>
                 .fit-picture {
                     content: url(@logoImage);
-                    max-width:60px;
+                    max-width: 60px;
+                    max-height: 60px;
                 }
 
                 .title-container, h4 {
                     font-size: 16px;
-                    margin-bottom: 0px;
+                }
+
+                .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+                    margin-bottom: 1px;
                 }
             </style>
         }
@@ -69,12 +100,15 @@
                 <img class="fit-picture"
                      alt="Logo Living Stream" />
                 <div class="logo-site"></div>
+
+                <div class="title-container">
+                    <h4>Українська</h4>
+                    <h4>Євангелька</h4>
+                    <h4>Церква!</h4>
+                </div>
             </div>
+
         </a>
-        <div class="title-container">
-            <h4>Українська</h4>
-            <h4>Євангелька</h4>
-            <h4>Церква!</h4>
-        </div>
+
     </div>
 </div>

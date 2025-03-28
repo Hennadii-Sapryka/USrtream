@@ -1,9 +1,9 @@
 ﻿* {
-    font-family: LivingStream-Regular;
+    font-family: LivingStream-Light;
 }
 
 b, strong, h1, h2, h3, h4, h5, h6 {
-    font-family: LivingStream-Bold;
+    font-family: LivingStream-Light;
 }
 
 form {
@@ -17,7 +17,7 @@ form {
 }
 
 .fit-picture {
-    max-width: 100px;
+    max-width: 110px;
 }
 
 .site-content {
@@ -28,7 +28,7 @@ form {
     position: relative;
     width: 1280px;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px;
 }
 
 @media(max-width: 1280px) {

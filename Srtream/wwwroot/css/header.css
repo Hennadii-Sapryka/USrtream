@@ -16,7 +16,7 @@
 }
 
 .header-container {
-    padding: 22px 0;
+    padding: 14px 20px;
 }
 
 .fit-picture {
@@ -41,6 +41,7 @@
 }
 
 .title-container {
+    width:100%;
     top: 70px;
     color: aliceblue;
     display:flow-root;
@@ -53,7 +54,6 @@
 .logo-site {
     font-size: 20px;
     letter-spacing: 2.6px;
-    font-family: LivingStream-SemiBold;
 }
 
 .nav-menu {
@@ -73,7 +73,6 @@
     line-height: 30px;
     text-decoration: none;
     color: white;
-    font-family: LivingStream-SemiBold;
 }
 
 .nav-item,
